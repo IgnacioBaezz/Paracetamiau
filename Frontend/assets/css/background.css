@@ -2,6 +2,7 @@
     background-image: url("../img/Fondo.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
 }
 .bg-color1 {
     background-color: var(--color1);
@@ -20,3 +21,8 @@
     background-color: var(--color8);
     color: white;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
