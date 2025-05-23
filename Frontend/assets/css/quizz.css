@@ -48,18 +48,14 @@
     }
 }
 
-/* Aplicar animación a los círculos */
-.zigzag-item .rounded-circle {
+.heartbeat {
     animation: heartbeat 2s ease-in-out infinite;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
-  /* Efecto hover */
-  .zigzag-item .rounded-circle:hover {
+.heartbeat:hover {
     animation-duration: 1s;
     transform: scale(1.2);
-
 }
 
 /* Responsive */
