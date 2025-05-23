@@ -21,64 +21,96 @@
 <body>
     <main class="bg-fish container-fluid">
         <div class="row">
+            <!-- Inicio Circulos de niveles -->
             <div class="col-12 col-lg-8">
                 <div class="zigzag-container">
                     <!-- Nivel 1 - Izquierda -->
                     <div class="zigzag-item zigzag-left">
-                        <div class="rounded-circle bg-color3 d-flex align-items-center justify-content-center shadow-lg circle-size">
+                        <div
+                            class="rounded-circle bg-color3 d-flex align-items-center justify-content-center shadow-lg circle-size">
                             <span class="fw-bold">NIVEL 1</span>
                         </div>
                     </div>
-    
+
                     <!-- Nivel 2 - Derecha -->
                     <div class="zigzag-item zigzag-right">
-                        <div class="rounded-circle bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
+                        <div
+                            class="rounded-circle bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
                             <span class="fw-bold">NIVEL 2</span>
                         </div>
                     </div>
-    
+
                     <!-- Nivel 3 - Izquierda -->
                     <div class="zigzag-item zigzag-left">
-                        <div class="rounded-circle bg-color1 d-flex align-items-center justify-content-center shadow-lg circle-size">
+                        <div
+                            class="rounded-circle bg-color1 d-flex align-items-center justify-content-center shadow-lg circle-size">
                             <span class="fw-bold">NIVEL 3</span>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Fin Circulos de niveles -->
 
+            <!--Botones-->
+            <div class="col-4 superpuesta">
+                <div class="d-flex align-items-end flex-column">
+                    <!-- Botón 1: Desafíos -->
+                    <div class="circle-container hover-expand bg-color1" onclick="window.location.href='index.html'">
+                        <div class="icon">
+                            <i class="fa-solid fa-cat"></i>
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-solid fa-cat fa-2x mb-1"></i>
+                            <h2 class="mb-1">Desafíos</h2>
+                            <i class="fa-solid fa-circle fa-sm mb-2"></i>
+                            <p class="small">Supera retos únicos cada día.</p>
+                        </div>
+                    </div>
 
-            <div class="col-4 ps-5">
-                <div class="d-flex align-items-end flex-column mb-3">
-                    <div class="p-2 container bg-color1 my-3 p-3 text-center rounded text-uppercase fw-bold">
-                        <div class="row justify-content-between text-center">
-                            <i class="fa-solid fa-cat col-3 display-4"></i>
-                            <h2 class="fs-2 col-6">Desafios</h2>
-                            <i class="fa-solid fa-circle text-end col-3 display-5"></i>
+                    <!-- Botón 2: Quiz -->
+                    <div class="circle-container hover-expand bg-color3 mt-3"
+                        onclick="window.location.href='index.html'">
+                        <div class="icon">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-solid fa-calculator fa-2x"></i>
+                            <h2>Quiz</h2>
+                            <i class="fa-solid fa-circle"></i>
+                            <p>Responde y aprende jugando.</p>
                         </div>
                     </div>
-                    <div class="p-2 container bg-color3 my-3 p-3 text-center rounded text-uppercase fw-bold">
-                        <div class="row justify-content-between text-center">
-                            <i class="fa-solid fa-calculator col-3 display-4"></i>
-                            <h2 class="fs-2 col-6">Quiz</h2>
-                            <i class="fa-solid fa-circle text-end col-3 display-5"></i>
+
+                    <!-- Botón 3: Multimedia -->
+                    <div class="circle-container hover-expand bg-color7 mt-3"
+                        onclick="window.location.href='index.html'">
+                        <div class="icon">
+                            <i class="fa-regular fa-circle-play"></i>
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-regular fa-circle-play fa-2x"></i>
+                            <h2>Multimedia</h2>
+                            <i class="fa-solid fa-circle"></i>
+                            <p>Videos y sonidos para explorar.</p>
                         </div>
                     </div>
-                    <div class="p-2 container bg-color7 my-3 p-3 text-center rounded text-uppercase fw-bold">
-                        <div class="row justify-content-between text-center">
-                            <i class="fa-regular fa-circle-play col-3 display-4"></i>
-                            <h2 class="fs-2 col-6">Multimedia</h2>
-                            <i class="fa-solid fa-circle text-end col-3 display-5"></i>
+
+                    <!-- Botón 4: Diario -->
+                    <div class="circle-container hover-expand bg-color8 mt-3"
+                        onclick="window.location.href='index.html'">
+                        <div class="icon">
+                            <i class="fa-regular fa-calendar-days"></i>
                         </div>
-                    </div>
-                    <div class="p-2 container bg-color8 my-3 p-3 text-center rounded text-uppercase fw-bold">
-                        <div class="row justify-content-between text-center">
-                            <i class="fa-regular fa-calendar-days col-3 display-4"></i>
-                            <h2 class="fs-2 col-6">Diario</h2>
-                            <i class="fa-solid fa-circle text-end col-3 display-5"></i>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-regular fa-calendar-days fa-2x"></i>
+                            <h2>Diario</h2>
+                            <i class="fa-solid fa-circle"></i>
+                            <p>Escribe tus experiencias diarias.</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--Fin de los botones-->
 
         </div>
     </main>
