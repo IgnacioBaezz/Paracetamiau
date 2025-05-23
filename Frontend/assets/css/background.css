@@ -1,5 +1,32 @@
-.fish-bg{
-    background-image: url("Frontend/assets/img/Fondo.svg");
+.bg-fish{
+    background-image: url("../img/Fondo.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
+}
+.bg-color1 {
+    background-color: var(--color1);
+    color: white;
+}
+.bg-color2t{
+    background-color: rgba(255, 162, 154, 0.5);
+    color: white !important;
+}
+.bg-color3 {
+    background-color: var(--color3);
+    color: white;
+}
+.bg-color7 {
+    background-color: var(--color7);
+    color: white;
+}
+
+.bg-color8 {
+    background-color: var(--color8);
+    color: white;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
