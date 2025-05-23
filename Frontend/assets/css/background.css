@@ -1,5 +1,22 @@
-.fish-bg{
-    background-image: url("Frontend/assets/img/Fondo.svg");
+.bg-fish{
+    background-image: url("../img/Fondo.svg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+.bg-color1 {
+    background-color: var(--color1);
+    color: white;
+}
+.bg-color3 {
+    background-color: var(--color3);
+    color: white;
+}
+.bg-color7 {
+    background-color: var(--color7);
+    color: white;
+}
+ 
+.bg-color8 {
+    background-color: var(--color8);
+    color: white;
 }
