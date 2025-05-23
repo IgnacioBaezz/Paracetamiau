@@ -1,0 +1,10 @@
+* {
+  font-family: "Madimi One", sans-serif;
+}
+
+.superpuesta {
+  position: absolute;
+  top: 20px; /* Ajusta según dónde quieres posicionarlo */
+  right: 0;  /* O usa left: 0 para alinearlo a la izquierda */
+  z-index: 10;
+}
