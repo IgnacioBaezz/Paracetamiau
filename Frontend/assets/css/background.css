@@ -16,6 +16,14 @@
     background-color: var(--color3);
     color: white;
 }
+.bg-color5 {
+    background-color: var(--color5);
+    color: white;
+}
+.bg-color6 {
+    background-color: var(--color6);
+    color: white;
+}
 .bg-color7 {
     background-color: var(--color7);
     color: white;
