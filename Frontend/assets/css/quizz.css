@@ -1,0 +1,82 @@
+.zigzag-container {
+    padding: 2rem 1rem;
+    min-height: 400px;
+}
+
+.zigzag-item {
+    margin: 2rem 0;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.zigzag-left {
+    justify-content: flex-start;
+    padding-left: 25%;
+}
+
+.zigzag-right {
+    justify-content: flex-end;
+    padding-right: 40%;
+}
+
+.circle-size {
+    width: clamp(120px, 15vw, 150px);
+    height: clamp(120px, 15vw, 150px);
+}
+
+  /* Animación Heartbeat */
+  @keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+    }
+    25% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0.3);
+    }
+    50% {
+        transform: scale(1.15);
+        box-shadow: 0 0 0 15px rgba(255, 107, 107, 0.1);
+    }
+    75% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+/* Aplicar animación a los círculos */
+.zigzag-item .rounded-circle {
+    animation: heartbeat 2s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+  /* Efecto hover */
+  .zigzag-item .rounded-circle:hover {
+    animation-duration: 1s;
+    transform: scale(1.2);
+
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .zigzag-left, .zigzag-right {
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .zigzag-item {
+        margin: 1.5rem 0;
+    }
+
+    .circle-size {
+        width: 100px;
+        height: 100px;
+        font-size: 12px;
+    }    
+}
+

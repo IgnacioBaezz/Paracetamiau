@@ -28,12 +28,10 @@
     background-color: var(--color7);
     color: white;
 }
-
 .bg-color8 {
     background-color: var(--color8);
     color: white;
 }
-
 html, body {
   height: 100%;
   margin: 0;
