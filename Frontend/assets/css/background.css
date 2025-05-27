@@ -8,12 +8,16 @@
     background-color: var(--color1);
     color: white;
 }
-.bg-color2t{
+.bg-color2 {
     background-color: rgba(255, 162, 154, 0.5);
     color: white !important;
 }
 .bg-color3 {
     background-color: var(--color3);
+    color: white;
+}
+.bg-color4 {
+    background-color: var(--color4);
     color: white;
 }
 .bg-color5 {

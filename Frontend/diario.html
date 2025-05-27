@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="assets/css/bienestar.css">
     <title> Diario de Bienestar | Paracetamiau</title>
 </head>
-<body class="bg-fish">
+<body class="bg-fish bg-color4">
     <!-- Navbar Start--> 
      <nav class="navbar bg-color7 sticky-top">
       <div class="container">
@@ -128,35 +128,68 @@
 
         <!-- Buttons End -->
 
-        <!-- Carousel Start -->
-         <div class="row justify-content-center">
-         <div id="carouselExample" class="carousel slide col-10 col-md-8 col-lg-6 col-xl-4">
-            <div class="carousel-inner">
-                <div class="carousel-item active ">
-                    <img src="assets/img/bienestar-carrusel.png" class="d-block w-50" alt="...">
-                </div>
-                <div class="carousel-item">
-                     <img src="assets/img/estadisticas-carrusel.png" class="d-block w-50" alt="...">
-                </div>
-                
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+         <!-- Racha Start -->
+        <div class="streak-wrapper pt-5 ">
+          <p class="streak-title">¡Llevas <span id="streak-count">2</span> días de Racha!</p>
+          <div class="streak-days">
+            <div class="day completed">✔</div>
+              <div class="day completed">✔</div>
+                <div class="day">🔒︎</div>
+                  <div class="day">🔒︎</div>
+                  <div class="day">🔒︎</div>
+                  <div class="day">🔒︎</div>
+                  <div class="day">🔒︎</div>
+          </div>
         </div>
+
+        <!-- Racha End -->
+
+        <!-- Carousel Start -->
+        <div class="container pt-5">
+          <div class="row justify-content-center align-items-center g-4">
+            
+            <!-- Carrusel -->
+            <div class="col-10 col-md-4">
+              <div id="carouselExample" class="carousel slide small-carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/bienestar-carrusel.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/estadisticas-carrusel.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="row justify-content-center col-">
+              <button class="bg-button">¿Necesitas meditar?</button>
+            </div>
+        </div>
+        <!-- Card message start -->
+        <div class="col-10 col-md-5 d-flex justify-content-center">
+          <div class="card card-container">
+            <div class="card-body">
+              «Aléjate de la gente que trata de empequeñecer tus ambiciones. La gente pequeña siempre hace eso, pero la gente realmente grande, te hace sentir que tú también puedes ser grande». 
+                <br> — Mark Twain
+            </div>
+          </div>
         </div>
        
         <!-- Carousel End -->
+         
         </div>
+        
 
     </main>
     <!-- Footer Start -->
-     <footer class="container fixed-bottom text-secondary">
+     <footer class="container  text-secondary pt-5">
       <div class="row justify-content-center text-center">
         <p class="col-12 col-md-4 col-lg-3">
           <a href="" class="nav-link">Farmacode.cats corp</a>
