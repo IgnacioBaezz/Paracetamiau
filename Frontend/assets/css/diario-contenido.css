@@ -1,86 +1,50 @@
     /* Calendar container */
- 
-
-    
     .calendar {
-            height: 335px;
-            width: 320px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 30px;
-        }
+        height: 335px;
+        width: 320px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
 
-        /* Calendar header styling */
+    /* Calendar header styling */
     .calendar-header {
-            text-align: center;
-            background-color: rgba(255, 111, 97, 0.6);
-            color: white;
-            padding: 10px;
-            font-size: 1.0em;
-            border-radius: 30px 30px 0px 0px ;
-        }
+        text-align: center;
+        background-color: rgba(255, 111, 97, 0.6);
+        color: white;
+        padding: 10px;
+        font-size: 1.0em;
+        border-radius: 30px 30px 0px 0px;
+    }
 
-        /* Days of the week styling */
+    /* Days of the week styling */
     .calendar-days {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            background-color: rgba(255, 111, 97, 0.6);
-            color: white;
-            border-radius: 0px ;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        background-color: rgba(255, 111, 97, 0.6);
+        color: white;
+        border-radius: 0px;
 
-        }
+    }
 
     .calendar-days div {
-            padding: 5px;
-            text-align: center;
-        }
+        padding: 5px;
+        text-align: center;
+    }
 
-        /* Date cells styling */
+    /* Date cells styling */
     .calendar-dates {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            padding-top: 10px;
-        }
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding-top: 10px;
+    }
 
     .calendar-dates div {
-            padding: 10px;
-            text-align: center;
-        }
-
-        /* Highlight today */
-    .today {
-            background-color: rgba(242, 239, 231, 0.5);
-            border-radius: 60px;
-        }
-
-    .card-style{
-        width: 400px;
-        height: 200px;
-        background-color: var(--color7);
-        border-radius: 30px;
+        padding: 10px;
         text-align: center;
-        color: var(--color4);
-    }
-    .check-style {
-        
-        height: 50px;
-        width: 300px;
-        background-color: var(--color3);
-        border-radius: 50px;
-        text-align: start;
-        color: var(--color4);
-        display: flex;
-        justify-content: space-between;
-    }
-    .icon-wrapper {
-    width: 32px;
-    height: 32px;
-    
     }
 
-    .check {
-      flex-shrink: 0;
-      width: 30px;
-      height: 30px;
-      background-color: #f1eee8;
-      border-radius: 50%;
+    /* Highlight today */
+    .today {
+        background-color: rgba(242, 239, 231, 0.5);
+        border-radius: 60px;
     }
