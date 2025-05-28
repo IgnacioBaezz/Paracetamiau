@@ -1,10 +1,22 @@
+.rounded-container {
+    width: 66.66%;
+    /* 6 de 9 partes */
+    background-color: var(--color8);
+    /* color de fondo suave */
+    color: white;
+    /* color del texto */
+    border-radius: 10px;
+    /* bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    /* sombra sutil */
+}
+
 .zigzag-container {
     padding: 2rem 1rem;
     min-height: 400px;
 }
 
 .zigzag-item {
-    margin: 2rem 0;
     display: flex;
     transition: all 0.3s ease;
 }
@@ -24,6 +36,23 @@
     height: clamp(100px, 10vw, 120px);
 }
 
+#btnHamburguesa {
+    position: fixed;
+    top: 120px;
+    /* Ajusta este valor para que coincida con la altura del título */
+    left: 20px;
+    /* Alineado a la izquierda */
+    z-index: 2000;
+    /* Que esté por encima de todo */
+    width: 50px;
+    height: 50px;
+    background-color: var(--color7);
+    opacity: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /* Animación Heartbeat */
 @keyframes heartbeat {
