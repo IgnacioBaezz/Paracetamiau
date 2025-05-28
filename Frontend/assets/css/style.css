@@ -7,3 +7,6 @@
   right: 0;  /* O usa left: 0 para alinearlo a la izquierda */
   z-index: 10;
 }
+html { /* scroll suave quizz */
+  scroll-behavior: smooth;
+}
