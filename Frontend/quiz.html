@@ -37,13 +37,20 @@
   <!--End Navbar-->
 
   <main class="container-fluid main-container-scroll">
+
     <div class="row position-relative row-scroll">
+
       <!-- Inicio menú -->
-      <div class="col-2 d-none d-md-block mt-4 col-left-fixed">
+      <div class="col-2 d-none d-lg-block mt-4 col-left-fixed">
         <div class="main-container">
           <div class="sidebar opacity-75">
-            <div class="menu-item" onclick="window.location.href='#'">RCP</div>
-            <div class="menu-item" onclick="selectTopic('convulsiones')">Convulsiones</div>
+            <div class="menu-item">
+              <a href="#rcp" class="nav-link text-dark" data-titulo="Rcp" data-bs-dismiss="offcanvas">Rcp</a>
+            </div>
+            <div class="menu-item">
+              <a href="#convulsiones" class="nav-link text-dark" data-titulo="Convulsiones"
+                data-bs-dismiss="offcanvas">Convulsiones</a>
+            </div>
             <div class="menu-item" onclick="selectTopic('fracturas')">Fracturas</div>
             <div class="menu-item" onclick="selectTopic('quemaduras')">Quemaduras</div>
             <div class="menu-item" onclick="selectTopic('shock')">Shock anafiláctico</div>
@@ -56,8 +63,21 @@
       <!-- Fin menú -->
 
       <!-- Inicio Circulos de niveles -->
-      <div class="col-9 col-center-scroll">
-       
+      <div class="col-12 col-lg-9 col-center-scroll">
+
+        <!-- Marcador invisible para navegación: RCP -->
+        <div style="position: relative;">
+          <div id="rcp" style="position: absolute; top: -80px;"></div>
+        </div>
+
+
+        <!-- Barra horizontal con nombre de la sección -->
+        <div class="d-flex justify-content-center my-4 opacity-50">
+          <div class="rounded-container p-3 text-center">
+            <h3 id="titulo-quizz" class="mb-0">RCP</h3>
+          </div>
+        </div>
+
         <div class="zigzag-container">
           <!-- Nivel 1 - Izquierda -->
           <div class="zigzag-item zigzag-left">
@@ -66,12 +86,12 @@
               <img src="assets/img/gato-vector.svg" alt="" width="60px">
             </div>
           </div>
-          
+
           <!-- Nivel 2 - Derecha -->
           <div class="zigzag-item zigzag-right">
             <div
               class="rounded-circle heartbeat bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
-              <img src="assets/img/gato-vector.svg" alt="" width="60px">
+              <img src="assets/img/Candado.png" alt="" width="60px">
             </div>
           </div>
 
@@ -79,7 +99,7 @@
           <div class="zigzag-item zigzag-left">
             <div
               class="rounded-circle heartbeat bg-color1 d-flex align-items-center justify-content-center shadow-lg circle-size">
-              <img src="assets/img/gato-vector.svg" alt="" width="60px">
+              <img src="assets/img/Candado.png" alt="" width="60px">
             </div>
           </div>
 
@@ -99,6 +119,28 @@
             </div>
           </div>
 
+          <!-- Sección Convulsiones -->
+
+          <!-- Marcador invisible para navegación: Convulsiones -->
+          <div style="position: relative;">
+            <div id="convulsiones" style="position: absolute; top: -80px;"></div>
+          </div>
+
+          <!-- Barra horizontal con nombre de la sección -->
+          <div id="convulsiones" class="d-flex justify-content-center my-5 opacity-50">
+            <div class="rounded-container p-3 text-center">
+              <h3 class="mb-0">Convulsiones</h3>
+            </div>
+          </div>
+
+          <!-- 2da sección nivel 1 - Derecha -->
+          <div class="zigzag-item zigzag-right">
+            <div
+              class="rounded-circle heartbeat bg-color3 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              <img src="assets/img/gato-vector.svg" alt="" width="60px" />
+            </div>
+          </div>
+          <!-- 2da sección nivel 2 - Izquierda -->
           <div class="zigzag-item zigzag-left">
             <div
               class="rounded-circle heartbeat bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
@@ -106,21 +148,23 @@
             </div>
           </div>
 
+          <!-- 2da sección nivel 3 - Derecha -->
+          <div class="zigzag-item zigzag-right">
+            <div
+              class="rounded-circle heartbeat bg-color1 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              <img src="assets/img/Candado.png" alt="" width="60px" />
+            </div>
+          </div>
+          <!-- 2da sección nivel 4 - Izquierda -->
           <div class="zigzag-item zigzag-left">
             <div
-              class="rounded-circle heartbeat bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              class="rounded-circle heartbeat bg-color3 d-flex align-items-center justify-content-center shadow-lg circle-size">
               <img src="assets/img/Candado.png" alt="" width="60px" />
             </div>
           </div>
 
-          <div class="zigzag-item zigzag-left">
-            <div
-              class="rounded-circle heartbeat bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
-              <img src="assets/img/Candado.png" alt="" width="60px" />
-            </div>
-          </div>
-
-          <div class="zigzag-item zigzag-left">
+          <!-- 2da sección nivel 5 - Derecha -->
+          <div class="zigzag-item zigzag-right">
             <div
               class="rounded-circle heartbeat bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
               <img src="assets/img/Candado.png" alt="" width="60px" />
@@ -189,6 +233,37 @@
       <!--Fin de los botones-->
     </div>
   </main>
+
+  <!-- Sidebar móvil -->
+  <div class="offcanvas offcanvas-start bg-color7 opacity-75" tabindex="-1" id="sidebarMenu"
+    aria-labelledby="sidebarMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-center" id="sidebarMenuLabel">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="menu-item mb-2">
+        <a href="#rcp" class="nav-link" data-titulo="RCP" data-bs-dismiss="offcanvas">RCP</a>
+      </div>
+      <div class="menu-item mb-2">
+        <a href="#convulsiones" class="nav-link" data-titulo="Convulsiones" data-bs-dismiss="offcanvas">Convulsiones</a>
+      </div>
+      <div class="menu-item mb-2" onclick="selectTopic('fracturas')">Fracturas</div>
+      <div class="menu-item mb-2" onclick="selectTopic('quemaduras')">Quemaduras</div>
+      <div class="menu-item mb-2" onclick="selectTopic('shock')">Shock anafiláctico</div>
+      <div class="menu-item mb-2" onclick="selectTopic('hemorragias')">Hemorragias</div>
+      <div class="menu-item mb-2" onclick="selectTopic('desmayos')">Desmayos</div>
+      <div class="menu-item mb-2" onclick="selectTopic('atragantamiento')">Atragantamiento</div>
+    </div>
+  </div>
+  <!-- Fin Sidebar móvil -->
+
+  <!-- Botón hamburguesa flotante solo visible en móviles -->
+  <button id="btnHamburguesa" class="btn rounded-circle d-lg-none" type="button" data-bs-toggle="offcanvas"
+    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <!-- Fin del botón hamburguesa -->
 
   <!-- Inicio del Footer -->
   <footer class="container text-secondary">
