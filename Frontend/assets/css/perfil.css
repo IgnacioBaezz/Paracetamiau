@@ -1,23 +1,21 @@
 :root {
-  /* Fuente principal */ 
-  --fuente-principal: 'Madimi One', cursive;
 
   /* Sombras */
-  --sombra-suave: 1px 1px 2px rgba(0,0,0,0.4);
-  --sombra-media: 1px 1px 2px rgba(0,0,0,0.5);
-  --sombra-fuerte: 1px 1px 2px rgba(0,0,0,0.6);
+  --sombra-suave: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  --sombra-media: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  --sombra-fuerte: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-/* Contenedor principal del perfil */ 
+/* Contenedor principal del perfil */
 .profile-container {
   max-width: 600px;
-  background-color: rgba(255, 255, 255, 0.4); 
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 14px 14px rgba(0, 0, 0, 0.5);
 }
 
-/* Círculo gris icono del usuario */ 
+/* Círculo gris icono del usuario */
 .user-circle {
   width: 80px;
   height: 80px;
@@ -31,16 +29,16 @@
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
 }
 
-/* Título principal PERFIL */ 
+/* Título principal PERFIL */
 .profile-title {
-  font-family: var(--fuente-principal);
+  font-family: var(--font-main);
   font-size: 2rem;
   text-shadow: var(--sombra-suave);
 }
 
 /* Etiquetas de los campos (NOMBRE, CORREO, CONTRASEÑA) */
 .form-label-custom {
-  text-shadow: var(--sombra-fuerte); 
+  text-shadow: var(--sombra-fuerte);
 }
 
 /* Input del nombre */
@@ -55,14 +53,16 @@
   text-shadow: var(--sombra-media);
 }
 
-/* Input de la contraseña */ 
+/* Input de la contraseña */
 .form-input-contrasena {
   background-color: rgba(255, 255, 255, 0.68);
   text-shadow: var(--sombra-media);
 }
+
 /*diseño del focus de bootstrap*/
 .form-control:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(3, 125, 125, 0.5); /* color rosadito */
+  box-shadow: 0 0 0 2px rgba(3, 125, 125, 0.5);
+  /* color rosadito */
   border: none;
 }
