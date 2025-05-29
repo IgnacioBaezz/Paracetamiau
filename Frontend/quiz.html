@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet" />
   <!--Links Internos-->
+  <link rel="stylesheet" href="assets/css/btn-burguer.css">
   <link rel="stylesheet" href="assets/css/scroll.css">
   <link rel="stylesheet" href="assets/css/multimedia.css">
   <link rel="stylesheet" href="assets/css/circleAnimation.css" />
@@ -45,13 +46,14 @@
         <div class="main-container">
           <div class="sidebar opacity-75">
             <div class="menu-item">
-              <a href="#rcp" class="nav-link text-dark" data-titulo="Rcp" data-bs-dismiss="offcanvas">Rcp</a>
+              <a href="#rcp" class="nav-link" data-bs-dismiss="offcanvas">Rcp</a>
             </div>
             <div class="menu-item">
-              <a href="#convulsiones" class="nav-link text-dark" data-titulo="Convulsiones"
-                data-bs-dismiss="offcanvas">Convulsiones</a>
+              <a href="#convulsiones" class="nav-link" data-bs-dismiss="offcanvas">Convulsiones</a>
             </div>
-            <div class="menu-item" onclick="selectTopic('fracturas')">Fracturas</div>
+            <div class="menu-item">
+              <a href="#fracturas" class="nav-link" data-bs-dismiss="offcanvas">Fracturas</a>
+            </div>
             <div class="menu-item" onclick="selectTopic('quemaduras')">Quemaduras</div>
             <div class="menu-item" onclick="selectTopic('shock')">Shock anafiláctico</div>
             <div class="menu-item" onclick="selectTopic('hemorragias')">Hemorragias</div>
@@ -63,16 +65,13 @@
       <!-- Fin menú -->
 
       <!-- Inicio Circulos de niveles -->
-      <div class="col-12 col-lg-9 col-center-scroll">
+      <div id="contenedor-scroll" class="col-12 col-lg-9 col-center-scroll">
 
         <!-- Marcador invisible para navegación: RCP -->
-        <div style="position: relative;">
-          <div id="rcp" style="position: absolute; top: -80px;"></div>
-        </div>
-
+        <div id="rcp" style="padding-top: 80px; margin-top: -80px;"></div>
 
         <!-- Barra horizontal con nombre de la sección -->
-        <div class="d-flex justify-content-center my-4 opacity-50">
+        <div class="d-flex justify-content-center my-4 bg-color8 w-50 mx-auto rounded-4 opacity-50">
           <div class="rounded-container p-3 text-center">
             <h3 id="titulo-quizz" class="mb-0">RCP</h3>
           </div>
@@ -122,12 +121,10 @@
           <!-- Sección Convulsiones -->
 
           <!-- Marcador invisible para navegación: Convulsiones -->
-          <div style="position: relative;">
-            <div id="convulsiones" style="position: absolute; top: -80px;"></div>
-          </div>
+          <div id="convulsiones" style="padding-top: 80px; margin-top: -80px;"></div>
 
           <!-- Barra horizontal con nombre de la sección -->
-          <div id="convulsiones" class="d-flex justify-content-center my-5 opacity-50">
+          <div class="d-flex justify-content-center my-5 bg-color1 w-50 mx-auto rounded-4 opacity-50">
             <div class="rounded-container p-3 text-center">
               <h3 class="mb-0">Convulsiones</h3>
             </div>
@@ -170,6 +167,57 @@
               <img src="assets/img/Candado.png" alt="" width="60px" />
             </div>
           </div>
+
+          <!-- Sección Fracturas -->
+
+          <!-- Barra horizontal con nombre de la sección -->
+          <div class="d-flex justify-content-center my-5 bg-color8 w-50 mx-auto rounded-4 opacity-50">
+            <div class="rounded-container p-3 text-center">
+              <h3 class="mb-0">Fracturas</h3>
+            </div>
+          </div>
+
+          <!-- Marcador invisible para navegación: Fracturas -->
+          <div id="fracturas" style="padding-top: 80px; margin-top: -80px;"></div>
+
+          <!-- 3ra sección nivel 1 - Izquierda -->
+          <div class="zigzag-item zigzag-left">
+            <div
+              class="rounded-circle heartbeat bg-color3 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              <img src="assets/img/gato-vector.svg" alt="" width="60px" />
+            </div>
+          </div>
+          <!-- 3ra sección nivel 2 - Derecha -->
+          <div class="zigzag-item zigzag-right">
+            <div
+              class="rounded-circle heartbeat bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              <img src="assets/img/Candado.png" alt="" width="60px" />
+            </div>
+          </div>
+
+          <!-- 3ra sección nivel 3 - Izquierda -->
+          <div class="zigzag-item zigzag-left">
+            <div
+              class="rounded-circle heartbeat bg-color1 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              <img src="assets/img/Candado.png" alt="" width="60px" />
+            </div>
+          </div>
+          <!-- 3ra sección nivel 4 - Derecha -->
+          <div class="zigzag-item zigzag-right">
+            <div
+              class="rounded-circle heartbeat bg-color3 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              <img src="assets/img/Candado.png" alt="" width="60px" />
+            </div>
+          </div>
+
+          <!-- 3ra sección nivel 5 - Izquierda -->
+          <div class="zigzag-item zigzag-left">
+            <div
+              class="rounded-circle heartbeat bg-color8 d-flex align-items-center justify-content-center shadow-lg circle-size">
+              <img src="assets/img/Candado.png" alt="" width="60px" />
+            </div>
+          </div>
+
         </div>
       </div>
       <!-- Fin Circulos de niveles -->
@@ -256,20 +304,22 @@
   </main>
 
   <!-- Sidebar móvil -->
-  <div class="offcanvas offcanvas-start bg-color7 opacity-75" tabindex="-1" id="sidebarMenu"
-    aria-labelledby="sidebarMenuLabel">
+  <div class="offcanvas offcanvas-start bg-color7 opacity-75" data-bs-scroll="true" data-bs-backdrop="false"
+    tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title text-center" id="sidebarMenuLabel">Menú</h5>
+      <h5 class="offcanvas-title" id="sidebarMenuLabel">Menú</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
     <div class="offcanvas-body">
       <div class="menu-item mb-2">
-        <a href="#rcp" class="nav-link" data-titulo="RCP" data-bs-dismiss="offcanvas">RCP</a>
+        <a href="#rcp" class="nav-link" data-bs-dismiss="offcanvas">RCP</a>
       </div>
       <div class="menu-item mb-2">
-        <a href="#convulsiones" class="nav-link" data-titulo="Convulsiones" data-bs-dismiss="offcanvas">Convulsiones</a>
+        <a href="#convulsiones" class="nav-link" data-bs-dismiss="offcanvas">Convulsiones</a>
       </div>
-      <div class="menu-item mb-2" onclick="selectTopic('fracturas')">Fracturas</div>
+      <div class="menu-item mb-2">
+        <a href="#fracturas" class="nav-link" data-bs-dismiss="offcanvas">Fracturas</a>
+      </div>
       <div class="menu-item mb-2" onclick="selectTopic('quemaduras')">Quemaduras</div>
       <div class="menu-item mb-2" onclick="selectTopic('shock')">Shock anafiláctico</div>
       <div class="menu-item mb-2" onclick="selectTopic('hemorragias')">Hemorragias</div>
@@ -290,6 +340,7 @@
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
   <!--Scripts Internos-->
+  <script src="assets/js/scroll-quizz.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
 

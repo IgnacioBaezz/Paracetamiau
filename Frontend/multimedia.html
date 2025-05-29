@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet" />
     <!--Links Internos-->
+    <link rel="stylesheet" href="assets/css/quizz.css">
+    <link rel="stylesheet" href="assets/css/btn-burguer.css">
     <link rel="stylesheet" href="assets/css/acordeon.css">
     <link rel="stylesheet" href="assets/css/multimedia.css">
     <link rel="stylesheet" href="assets/css/circleAnimation.css">
@@ -38,19 +40,21 @@
     <main class="container-fluid">
         <div class="row position-relative">
 
-            <h2 class="display-6 text-center text-uppercase">Primeros Auxilios</h2>
             <!-- Inicio menú -->
-            <div class="col-2 d-none d-md-block mt-3">
+            <div class="col-2 d-none d-lg-block mt-3">
                 <div class="main-container">
                     <div class="sidebar bg-color3 opacity-75">
-                        <div class="menu-item " onclick="window.location.href='#'">RCP</div>
-                        <div class="menu-item" onclick="selectTopic('convulsiones')">Convulsiones</div>
-                        <div class="menu-item" onclick="selectTopic('fracturas')">Fracturas</div>
-                        <div class="menu-item" onclick="selectTopic('quemaduras')">Quemaduras</div>
-                        <div class="menu-item" onclick="selectTopic('shock')">Shock anafiláctico</div>
-                        <div class="menu-item" onclick="selectTopic('hemorragias')">Hemorragias</div>
-                        <div class="menu-item" onclick="selectTopic('desmayos')">Desmayos</div>
-                        <div class="menu-item" onclick="selectTopic('atragantamiento')">Atragantamiento</div>
+                        <div class="menu-item " onclick="expandAccordion('collapseOne', 'rcp')">RCP</div>
+                        <div class="menu-item" onclick="expandAccordion('collapseTwo', 'convulsiones')">Convulsiones
+                        </div>
+                        <div class="menu-item" onclick="expandAccordion('collapseThree', 'fracturas')">Fracturas</div>
+                        <div class="menu-item" onclick="expandAccordion('collapseFour', 'quemaduras')">Quemaduras</div>
+                        <div class="menu-item" onclick="expandAccordion('collapseFive', 'shock-anafilactico')">Shock
+                            anafiláctico</div>
+                        <div class="menu-item" onclick="expandAccordion('collapseSix', 'hemorragias')">Hemorragias</div>
+                        <div class="menu-item" onclick="expandAccordion('collapseSeven', 'desmayos')">Desmayos</div>
+                        <div class="menu-item" onclick="expandAccordion('collapseEight', 'atragantamiento')">
+                            Atragantamiento</div>
                     </div>
                 </div>
 
@@ -58,12 +62,20 @@
             <!-- Fin menú -->
 
             <!-- Inicio acordeón -->
-            <div class="col-10 col-md-8 mt-3">
+            <div class="col-12 col-md-8 mt-3">
+
+                <!-- Barra horizontal con nombre de la sección -->
+                <div class="d-flex justify-content-center my-4 bg-color8 w-50 mx-auto rounded-4 opacity-50">
+                    <div class="rounded-container p-3 text-center">
+                        <h3 id="titulo-quizz" class="mb-0">Primeros Auxilios</h3>
+                    </div>
+                </div>
+
                 <div class="accordion" id="accordionMultimedia">
-                    <div class="accordion-item">
+                    <div id="rcp" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 RCP
                             </button>
                         </h2>
@@ -92,7 +104,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div id="convulsiones" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -128,7 +140,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div id="fracturas" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -165,7 +177,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div id="quemaduras" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
@@ -202,7 +214,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div id="shock-anafilactico" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
@@ -240,7 +252,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div id="hemorragias" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
@@ -276,7 +288,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div id="desmayos" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
@@ -313,7 +325,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div id="atragantamiento" class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
@@ -439,11 +451,59 @@
             </div>
         </div>
     </main>
+    <!-- Sidebar móvil -->
+    <div class="offcanvas offcanvas-start bg-color7 opacity-75" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="handleOffcanvasClick('collapseOne', 'convulsiones')">Rcp</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link"
+                    onclick="handleOffcanvasClick('collapseTwo', 'convulsiones')">Convulsiones</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="handleOffcanvasClick('collapseThree', 'fracturas')">Fracturas</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="handleOffcanvasClick('collapseFour', 'quemaduras')">Quemaduras</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="handleOffcanvasClick('collapseFive', 'shock-anafilactico')">Shock
+                    anafiláctico</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link"
+                    onclick="handleOffcanvasClick('collapseSix', 'hemorragias')">Hemorragias</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="handleOffcanvasClick('collapseSeven', 'desmayos')">Desmayos</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link"
+                    onclick="handleOffcanvasClick('collapseEight', 'atragantamiento')">Atragantamiento</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Sidebar móvil -->
+
+    <!-- Botón hamburguesa flotante solo visible en móviles -->
+    <button id="btnHamburguesa" class="btn rounded-circle d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Fin del botón hamburguesa -->
     <!--Scripts Externos-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
     <!--Scripts Internos-->
+    <script src="assets/js/scroll-offcanvas-acor.js"></script>
+    <script src="assets/js/scroll-acordeon.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 
