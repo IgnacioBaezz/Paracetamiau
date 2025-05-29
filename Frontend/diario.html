@@ -30,20 +30,20 @@
       <a class="navbar-brand" href="home.html">
         <img src="assets/img/Paracetamiau.png" alt="Paracetamiau" width="180" />
       </a>
-
+      <h2 class="text-uppercase fw-bold mx-auto">Diario de bienestar</h2>
     </div>
   </nav>
   <!-- Navbar End-->
 
   <main class="container-fluid">
     <div class="row position-relative">
-      <!-- Buttons Start-->
-      <div class="col-3 superpuesta">
+      <!--Botones Desktop-->
+      <div class="col-3 superpuesta d-none d-md-block me-2">
         <div class="d-flex align-items-end flex-column">
           <!-- Botón 1: Perfil -->
           <div class="circle-container hover-expand bg-color1" onclick="window.location.href='perfil.html'">
             <div class="icon">
-              <i class="fa-solid fa-cat"></i>
+              <i class="fa-solid fa-cat fa-3x mt-3"></i>
             </div>
             <div class="card-content d-flex flex-column align-items-center text-center">
               <i class="fa-solid fa-cat fa-2x mb-1"></i>
@@ -56,7 +56,7 @@
           <!-- Botón 2: Quiz -->
           <div class="circle-container hover-expand bg-color3 mt-3" onclick="window.location.href='quiz.html'">
             <div class="icon">
-              <i class="fa-solid fa-calculator"></i>
+              <i class="fa-solid fa-calculator fa-3x mt-3"></i>
             </div>
             <div class="card-content d-flex flex-column align-items-center text-center">
               <i class="fa-solid fa-calculator fa-2x"></i>
@@ -69,7 +69,7 @@
           <!-- Botón 3: Multimedia -->
           <div class="circle-container hover-expand bg-color7 mt-3" onclick="window.location.href='multimedia.html'">
             <div class="icon">
-              <i class="fa-regular fa-circle-play"></i>
+              <i class="fa-regular fa-circle-play fa-3x mt-3"></i>
             </div>
             <div class="card-content d-flex flex-column align-items-center text-center">
               <i class="fa-regular fa-circle-play fa-2x"></i>
@@ -82,7 +82,7 @@
           <!-- Botón 4: Diario -->
           <div class="circle-container hover-expand bg-color8 mt-3" onclick="window.location.href='diario.html'">
             <div class="icon">
-              <i class="fa-regular fa-calendar-days"></i>
+              <i class="fa-regular fa-calendar-days fa-3x mt-3"></i>
             </div>
             <div class="card-content d-flex flex-column align-items-center text-center">
               <i class="fa-regular fa-calendar-days fa-2x"></i>
@@ -91,10 +91,30 @@
               <p>Escribe tus experiencias diarias.</p>
             </div>
           </div>
+
         </div>
       </div>
-
-      <!-- Buttons End -->
+      <!--Botones Mobile-->
+      <div class="d-block d-md-none">
+        <div class="mobile-nav d-flex justify-content-around align-items-center">
+          <!-- Botón 1 -->
+          <div class="circle-container bg-color1" onclick="window.location.href='perfil.html'">
+            <div class="icon"><i class="fa-solid fa-cat fa-2x mt-3"></i></div>
+          </div>
+          <!-- Botón 2 -->
+          <div class="circle-container bg-color3" onclick="window.location.href='quiz.html'">
+            <div class="icon"><i class="fa-solid fa-calculator fa-2x mt-3"></i></div>
+          </div>
+          <!-- Botón 3 -->
+          <div class="circle-container bg-color7" onclick="window.location.href='multimedia.html'">
+            <div class="icon"><i class="fa-regular fa-circle-play fa-2x mt-3"></i></div>
+          </div>
+          <!-- Botón 4 -->
+          <div class="circle-container bg-color8" onclick="window.location.href='diario.html'">
+            <div class="icon"><i class="fa-regular fa-calendar-days fa-2x mt-3"></i></div>
+          </div>
+        </div>
+      </div>
 
       <!-- Racha Start -->
       <div class="streak-wrapper pt-3 ">
