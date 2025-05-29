@@ -28,18 +28,48 @@
       <a class="navbar-brand" href="home.html">
         <img src="assets/img/Paracetamiau.png" alt="Paracetamiau" width="180" />
       </a>
+      <h2 class="text-uppercase fw-bold mx-auto">Pregunta de Quizz</h2>
     </div>
   </nav>
   <!--End Navbar-->
 
   <main class="container-fluid">
     <div class="row position-relative">
-      <div class="col-12 text-center">
-        <div class="container justify-content-center p-3">
-          <img src="assets/img/Gato solo.png" alt="Gato" />
-          <h2 class="bg-color8 w-50 mx-auto rounded p-2">
-            Chat<i class="fa-regular fa-comment ps-3"></i>
-          </h2>
+      <div class="col-12 col-md-10 text-center mx-auto my-3">
+        <div class="container rounded shadow-lg p-4 bg-color2t position-relative">
+          <h3 class="fw-bold display-5 text-uppercase text-white py-2 rounded">Pregunta 1 de 5</h3>
+          <p class="fs-3 mt-3">¿Qué harías si alguien se desmaya?</p>
+
+          <form class="my-2">
+            <div class="row p-5">
+              <div class="form-check text-start mb-2">
+                <input class="form-check-input fs-4" type="radio" name="respuesta" id="opcion1" />
+                <label class="form-check-label fs-4" for="opcion1">Gritar fuerte</label>
+              </div>
+              <div class="form-check text-start mb-2">
+                <input class="form-check-input fs-4" type="radio" name="respuesta" id="opcion2" />
+                <label class="form-check-label fs-4" for="opcion2">Salir corriendo a pedir ayuda</label>
+              </div>
+              <div class="form-check text-start mb-2">
+                <input class="form-check-input fs-4" type="radio" name="respuesta" id="opcion3" />
+                <label class="form-check-label fs-4" for="opcion3">Echarle agua</label>
+              </div>
+              <div class="form-check text-start mb-3">
+                <input class="form-check-input fs-4" type="radio" name="respuesta" id="opcion4" />
+                <label class="form-check-label fs-4" for="opcion4">Comprobar si respira</label>
+              </div>
+
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-lg bg-color7 text-white fw-bold px-4 py-2">
+                  Enviar Respuesta
+                </button>
+              </div>
+            </div>
+          </form>
+          <!-- Imagen flotante arriba a la derecha -->
+          <img src="assets/img/gato-pregunta.svg" alt="Gato doctor confundido"
+            class="position-absolute bottom-0 end-0 me-3 mb-3 col-3" />
+
         </div>
       </div>
       <!--Botones Desktop-->
@@ -121,6 +151,11 @@
         </div>
       </div>
 
+    </div>
+
+    <!--Botones-->
+
+    <!--Fin de los botones-->
     </div>
   </main>
   <!--Scripts Externos-->
