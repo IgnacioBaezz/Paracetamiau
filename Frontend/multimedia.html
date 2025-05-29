@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet" />
     <!--Links Internos-->
+    <link rel="stylesheet" href="assets/css/acordeon.css">
     <link rel="stylesheet" href="assets/css/multimedia.css">
     <link rel="stylesheet" href="assets/css/circleAnimation.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -25,26 +26,24 @@
 <body class="bg-fish">
     <!--Inicio Navbar-->
     <nav class="navbar bg-color7 sticky-top">
-
         <div class="container">
             <a class="navbar-brand" href="home.html">
-
                 <img src="assets/img/Paracetamiau.png" alt="Paracetamiau" width="180" />
-
             </a>
         </div>
+        <h2 class="text-uppercase fw-bold mx-auto">Multimedia</h2>
     </nav>
     <!--Fin Navbar-->
 
     <main class="container-fluid">
         <div class="row position-relative">
 
-            <h1 class="text-uppercase text-center fw-bold">Multimedia</h1>
-
-            <div class="col-3">
+            <h2 class="display-6 text-center text-uppercase">Primeros Auxilios</h2>
+            <!-- Inicio menú -->
+            <div class="col-2 d-none d-md-block mt-3">
                 <div class="main-container">
-                    <div class="sidebar">
-                        <div class="menu-item active" onclick="selectTopic('rcp')">RCP</div>
+                    <div class="sidebar bg-color3 opacity-75">
+                        <div class="menu-item " onclick="window.location.href='#'">RCP</div>
                         <div class="menu-item" onclick="selectTopic('convulsiones')">Convulsiones</div>
                         <div class="menu-item" onclick="selectTopic('fracturas')">Fracturas</div>
                         <div class="menu-item" onclick="selectTopic('quemaduras')">Quemaduras</div>
@@ -53,25 +52,321 @@
                         <div class="menu-item" onclick="selectTopic('desmayos')">Desmayos</div>
                         <div class="menu-item" onclick="selectTopic('atragantamiento')">Atragantamiento</div>
                     </div>
+                </div>
 
             </div>
+            <!-- Fin menú -->
 
-            <div class="col-9">
+            <!-- Inicio acordeón -->
+            <div class="col-10 col-md-8 mt-3">
+                <div class="accordion" id="accordionMultimedia">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                RCP
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionMultimedia">
+                            <div class="accordion-body">
+                                <h2 class="display-5 text-center text-uppercase">Guía paso a paso para aprender RCP.
+                                </h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio expedita
+                                    repellendus, eveniet hic quod incidunt necessitatibus minus ad eligendi optio
+                                    dolores laborum, fugiat voluptate eius sit ipsum dignissimos! Aliquid tenetur
+                                    inventore voluptatibus doloremque, quia ullam in iure omnis iste quaerat cupiditate
+                                    aperiam, aut, illum rem? Praesentium sunt illum perferendis rerum.</p>
 
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aspernatur nesciunt
+                                    suscipit laboriosam eveniet delectus repellat. Unde repudiandae optio, sed nulla
+                                    porro dolore facilis eius harum, tempora, magni assumenda eaque facere quam
+                                    doloribus id atque error excepturi sequi. Voluptatum sunt voluptas ut ipsa
+                                    temporibus. Illo quam quo enim animi veritatis!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Convulsiones
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionmultimedia">
+                            <div class="accordion-body">
+                                <h2 class="fs-8 text-center text-uppercase">Como reaccionar ante una convulsión</h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                    veritatis enim
+                                    totam quam voluptatibus cumque aut ipsa magni commodi, expedita, nulla, natus
+                                    nostrum. Illo modi sequi suscipit dicta, atque error architecto provident voluptate
+                                    possimus autem iste quam tempore obcaecati impedit distinctio fuga quasi voluptates
+                                    blanditiis corrupti at. Natus rerum modi perferendis deleniti aspernatur, a, sit
+                                    similique dolores est ipsum quibusdam officiis libero delectus porro eum
+                                    perspiciatis nam numquam doloribus maxime? Veniam molestiae veritatis unde eius esse
+                                    voluptatem nemo aliquid accusamus rerum reprehenderit amet reiciendis aliquam
+                                    ratione, ea possimus, odit laudantium, non deserunt quo cupiditate ipsam odio?
+                                    Magnam ipsum quis enim. </p>
+
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse debitis ipsam
+                                    aperiam optio voluptates, consequatur tenetur, temporibus minima eligendi, porro
+                                    quibusdam sapiente a reprehenderit eius culpa? Cupiditate voluptatem tenetur iure
+                                    perspiciatis distinctio possimus explicabo quam error odio veniam ut libero, tempora
+                                    quibusdam illo reprehenderit ex incidunt delectus quod et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Fracturas
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionmultimedia">
+                            <div class="accordion-body">
+                                <h2 class="display-5 text-center text-uppercase">Aprende sobre fracturas</h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                    veritatis enim
+                                    totam quam voluptatibus cumque aut ipsa magni commodi, expedita, nulla, natus
+                                    nostrum. Illo modi sequi suscipit dicta, atque error architecto provident voluptate
+                                    possimus autem iste quam tempore obcaecati impedit distinctio fuga quasi voluptates
+                                    blanditiis corrupti at. Natus rerum modi perferendis deleniti aspernatur, a, sit
+                                    similique dolores est ipsum quibusdam officiis libero delectus porro eum
+                                    perspiciatis nam numquam doloribus maxime? Veniam molestiae veritatis unde eius esse
+                                    voluptatem nemo aliquid accusamus rerum reprehenderit amet reiciendis aliquam
+                                    ratione, ea possimus, odit laudantium, non deserunt quo cupiditate ipsam odio?
+                                    Magnam ipsum quis enim. </p>
+
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse debitis ipsam
+                                    aperiam optio voluptates, consequatur tenetur, temporibus minima eligendi, porro
+                                    quibusdam sapiente a reprehenderit eius culpa? Cupiditate voluptatem tenetur iure
+                                    perspiciatis distinctio possimus explicabo quam error odio veniam ut libero, tempora
+                                    quibusdam illo reprehenderit ex incidunt delectus quod et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                Quemaduras
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionmultimedia">
+                            <div class="accordion-body">
+                                <h2 class="fs-8 text-center text-uppercase">Como tratar quemaduras</h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                    veritatis enim
+                                    totam quam voluptatibus cumque aut ipsa magni commodi, expedita, nulla, natus
+                                    nostrum. Illo modi sequi suscipit dicta, atque error architecto provident voluptate
+                                    possimus autem iste quam tempore obcaecati impedit distinctio fuga quasi voluptates
+                                    blanditiis corrupti at. Natus rerum modi perferendis deleniti aspernatur, a, sit
+                                    similique dolores est ipsum quibusdam officiis libero delectus porro eum
+                                    perspiciatis nam numquam doloribus maxime? Veniam molestiae veritatis unde eius esse
+                                    voluptatem nemo aliquid accusamus rerum reprehenderit amet reiciendis aliquam
+                                    ratione, ea possimus, odit laudantium, non deserunt quo cupiditate ipsam odio?
+                                    Magnam ipsum quis enim. </p>
+
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse debitis ipsam
+                                    aperiam optio voluptates, consequatur tenetur, temporibus minima eligendi, porro
+                                    quibusdam sapiente a reprehenderit eius culpa? Cupiditate voluptatem tenetur iure
+                                    perspiciatis distinctio possimus explicabo quam error odio veniam ut libero, tempora
+                                    quibusdam illo reprehenderit ex incidunt delectus quod et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                Shock anafiláctico
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionmultimedia">
+                            <div class="accordion-body">
+                                <h2 class="display-5 text-center text-uppercase">Como reaccionar ante una shock
+                                    anafilactico</h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                    veritatis enim
+                                    totam quam voluptatibus cumque aut ipsa magni commodi, expedita, nulla, natus
+                                    nostrum. Illo modi sequi suscipit dicta, atque error architecto provident voluptate
+                                    possimus autem iste quam tempore obcaecati impedit distinctio fuga quasi voluptates
+                                    blanditiis corrupti at. Natus rerum modi perferendis deleniti aspernatur, a, sit
+                                    similique dolores est ipsum quibusdam officiis libero delectus porro eum
+                                    perspiciatis nam numquam doloribus maxime? Veniam molestiae veritatis unde eius esse
+                                    voluptatem nemo aliquid accusamus rerum reprehenderit amet reiciendis aliquam
+                                    ratione, ea possimus, odit laudantium, non deserunt quo cupiditate ipsam odio?
+                                    Magnam ipsum quis enim. </p>
+
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse debitis ipsam
+                                    aperiam optio voluptates, consequatur tenetur, temporibus minima eligendi, porro
+                                    quibusdam sapiente a reprehenderit eius culpa? Cupiditate voluptatem tenetur iure
+                                    perspiciatis distinctio possimus explicabo quam error odio veniam ut libero, tempora
+                                    quibusdam illo reprehenderit ex incidunt delectus quod et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                Hemorragias
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionmultimedia">
+                            <div class="accordion-body">
+                                <h2 class="display-5 text-center text-uppercase">Que hacer frente a una hemorragia</h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                    veritatis enim
+                                    totam quam voluptatibus cumque aut ipsa magni commodi, expedita, nulla, natus
+                                    nostrum. Illo modi sequi suscipit dicta, atque error architecto provident voluptate
+                                    possimus autem iste quam tempore obcaecati impedit distinctio fuga quasi voluptates
+                                    blanditiis corrupti at. Natus rerum modi perferendis deleniti aspernatur, a, sit
+                                    similique dolores est ipsum quibusdam officiis libero delectus porro eum
+                                    perspiciatis nam numquam doloribus maxime? Veniam molestiae veritatis unde eius esse
+                                    voluptatem nemo aliquid accusamus rerum reprehenderit amet reiciendis aliquam
+                                    ratione, ea possimus, odit laudantium, non deserunt quo cupiditate ipsam odio?
+                                    Magnam ipsum quis enim. </p>
+
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse debitis ipsam
+                                    aperiam optio voluptates, consequatur tenetur, temporibus minima eligendi, porro
+                                    quibusdam sapiente a reprehenderit eius culpa? Cupiditate voluptatem tenetur iure
+                                    perspiciatis distinctio possimus explicabo quam error odio veniam ut libero, tempora
+                                    quibusdam illo reprehenderit ex incidunt delectus quod et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+                                Desmayos
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionmultimedia">
+                            <div class="accordion-body">
+                                <h2 class="display-5 text-center text-uppercase">Que hacer frente a desmayos</h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                    veritatis enim
+                                    totam quam voluptatibus cumque aut ipsa magni commodi, expedita, nulla, natus
+                                    nostrum. Illo modi sequi suscipit dicta, atque error architecto provident voluptate
+                                    possimus autem iste quam tempore obcaecati impedit distinctio fuga quasi voluptates
+                                    blanditiis corrupti at. Natus rerum modi perferendis deleniti aspernatur, a, sit
+                                    similique dolores est ipsum quibusdam officiis libero delectus porro eum
+                                    perspiciatis nam numquam doloribus maxime? Veniam molestiae veritatis unde eius esse
+                                    voluptatem nemo aliquid accusamus rerum reprehenderit amet reiciendis aliquam
+                                    ratione, ea possimus, odit laudantium, non deserunt quo cupiditate ipsam odio?
+                                    Magnam ipsum quis enim. </p>
+
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse debitis ipsam
+                                    aperiam optio voluptates, consequatur tenetur, temporibus minima eligendi, porro
+                                    quibusdam sapiente a reprehenderit eius culpa? Cupiditate voluptatem tenetur iure
+                                    perspiciatis distinctio possimus explicabo quam error odio veniam ut libero, tempora
+                                    quibusdam illo reprehenderit ex incidunt delectus quod et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">
+                                Atragantamiento
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionmultimedia">
+                            <div class="accordion-body">
+                                <h2 class="display-5 text-center text-uppercase">Como reaccionar frente a un
+                                    atragantamiento</h2>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/e05ZDPm6XCQ"
+                                        title="OYE COMO VA. Homenaje al maestro TITO PUENTE" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
+                                    veritatis enim
+                                    totam quam voluptatibus cumque aut ipsa magni commodi, expedita, nulla, natus
+                                    nostrum. Illo modi sequi suscipit dicta, atque error architecto provident voluptate
+                                    possimus autem iste quam tempore obcaecati impedit distinctio fuga quasi voluptates
+                                    blanditiis corrupti at. Natus rerum modi perferendis deleniti aspernatur, a, sit
+                                    similique dolores est ipsum quibusdam officiis libero delectus porro eum
+                                    perspiciatis nam numquam doloribus maxime? Veniam molestiae veritatis unde eius esse
+                                    voluptatem nemo aliquid accusamus rerum reprehenderit amet reiciendis aliquam
+                                    ratione, ea possimus, odit laudantium, non deserunt quo cupiditate ipsam odio?
+                                    Magnam ipsum quis enim. </p>
+
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse debitis ipsam
+                                    aperiam optio voluptates, consequatur tenetur, temporibus minima eligendi, porro
+                                    quibusdam sapiente a reprehenderit eius culpa? Cupiditate voluptatem tenetur iure
+                                    perspiciatis distinctio possimus explicabo quam error odio veniam ut libero, tempora
+                                    quibusdam illo reprehenderit ex incidunt delectus quod et.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+            <!-- Fin acordeón -->
 
-            <!--Botones-->
-            <div class="col-4 superpuesta">
+            <!--Botones Desktop-->
+            <div class="col-3 superpuesta d-none d-md-block me2">
                 <div class="d-flex align-items-end flex-column">
-                    <!-- Botón 1: Desafíos -->
+                    <!-- Botón 1: Perfil -->
                     <div class="circle-container hover-expand bg-color1" onclick="window.location.href='perfil.html'">
                         <div class="icon">
-                            <i class="fa-solid fa-cat"></i>
+                            <i class="fa-solid fa-cat fa-3x mt-3"></i>
                         </div>
                         <div class="card-content d-flex flex-column align-items-center text-center">
                             <i class="fa-solid fa-cat fa-2x mb-1"></i>
-                            <h2 class="mb-1">Desafíos</h2>
+                            <h2 class="mb-1">Perfil</h2>
                             <i class="fa-solid fa-circle fa-sm mb-2"></i>
                             <p class="small">Supera retos únicos cada día.</p>
                         </div>
@@ -81,7 +376,7 @@
                     <div class="circle-container hover-expand bg-color3 mt-3"
                         onclick="window.location.href='quiz.html'">
                         <div class="icon">
-                            <i class="fa-solid fa-calculator"></i>
+                            <i class="fa-solid fa-calculator fa-3x mt-3"></i>
                         </div>
                         <div class="card-content d-flex flex-column align-items-center text-center">
                             <i class="fa-solid fa-calculator fa-2x"></i>
@@ -95,7 +390,7 @@
                     <div class="circle-container hover-expand bg-color7 mt-3"
                         onclick="window.location.href='multimedia.html'">
                         <div class="icon">
-                            <i class="fa-regular fa-circle-play"></i>
+                            <i class="fa-regular fa-circle-play fa-3x mt-3"></i>
                         </div>
                         <div class="card-content d-flex flex-column align-items-center text-center">
                             <i class="fa-regular fa-circle-play fa-2x"></i>
@@ -109,7 +404,7 @@
                     <div class="circle-container hover-expand bg-color8 mt-3"
                         onclick="window.location.href='diario.html'">
                         <div class="icon">
-                            <i class="fa-regular fa-calendar-days"></i>
+                            <i class="fa-regular fa-calendar-days fa-3x mt-3"></i>
                         </div>
                         <div class="card-content d-flex flex-column align-items-center text-center">
                             <i class="fa-regular fa-calendar-days fa-2x"></i>
@@ -118,30 +413,32 @@
                             <p>Escribe tus experiencias diarias.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
-            <!--Fin de los botones-->
+            <!--Botones Mobile-->
+            <div class="d-block d-md-none">
+                <div class="mobile-nav d-flex justify-content-around align-items-center">
+                    <!-- Botón 1 -->
+                    <div class="circle-container bg-color1" onclick="window.location.href='perfil.html'">
+                        <div class="icon"><i class="fa-solid fa-cat fa-2x mt-3"></i></div>
+                    </div>
+                    <!-- Botón 2 -->
+                    <div class="circle-container bg-color3" onclick="window.location.href='quiz.html'">
+                        <div class="icon"><i class="fa-solid fa-calculator fa-2x mt-3"></i></div>
+                    </div>
+                    <!-- Botón 3 -->
+                    <div class="circle-container bg-color7" onclick="window.location.href='multimedia.html'">
+                        <div class="icon"><i class="fa-regular fa-circle-play fa-2x mt-3"></i></div>
+                    </div>
+                    <!-- Botón 4 -->
+                    <div class="circle-container bg-color8" onclick="window.location.href='diario.html'">
+                        <div class="icon"><i class="fa-regular fa-calendar-days fa-2x mt-3"></i></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-
-    <!-- Inicio del Footer -->
-    <footer class="container fixed-bottom text-secondary">
-        <div class="row">
-            <p class="col-3 me-5">
-                <a href="" class="nav-link">Farmacode.cats corp</a>
-            </p>
-            <p class="col-2 text-end ms-5">
-                <a href="" class="nav-link">Contacto y privacidad</a>
-            </p>
-            <p class="col-2 text-end mx-5">
-                <a href="" class="nav-link">Sobre nosotros</a>
-            </p>
-            <p class="col-3 text-end text-uppercase fs-5 fw-semibold">
-                <a href="" class="nav-link">¿A quien llamar?</a>
-            </p>
-        </div>
-    </footer>
-    <!-- Fin del Footer -->
     <!--Scripts Externos-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
