@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links Externos-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet" />
+    <!--Links Internos-->
+    <link rel="stylesheet" href="assets/css/quizz.css">
+    <link rel="stylesheet" href="assets/css/btn-burguer.css">
+    <link rel="stylesheet" href="assets/css/acordeon.css">
+    <link rel="stylesheet" href="assets/css/multimedia.css">
+    <link rel="stylesheet" href="assets/css/circleAnimation.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/background.css">
+    <title>Multimedia 2 | Paracetamiau</title>
+</head>
+
+<body class="bg-fish">
+    <!--Inicio Navbar-->
+    <nav class="navbar bg-color7 sticky-top">
+
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+
+                <img src="assets/img/Paracetamiau.png" alt="Paracetamiau" width="180" />
+
+            </a>
+            <h1 class="text-uppercase text-center display-5">Multimedia</h1>
+        </div>
+
+    </nav>
+    <!--Fin Navbar-->
+
+    <main class="container-fluid">
+        <div class="row position-relative">
+
+            <!-- Inicio menú -->
+            <div class="col-2 d-none d-lg-block mt-3">
+                <div class="main-container">
+                    <div class="sidebar bg-color3 opacity-75">
+                        <div class="menu-item " onclick="mostrarContenido('rcp', this)">RCP</div>
+                        <div class="menu-item" onclick="mostrarContenido('convulsiones', this)">Convulsiones
+                        </div>
+                        <div class="menu-item" onclick="mostrarContenido('fracturas', this)">Fracturas</div>
+                        <div class="menu-item" onclick="mostrarContenido('quemaduras', this)">Quemaduras</div>
+                        <div class="menu-item" onclick="mostrarContenido('shock', this)">Shock
+                            anafiláctico</div>
+                        <div class="menu-item" onclick="mostrarContenido('hemorragias', this)">Hemorragias</div>
+                        <div class="menu-item" onclick="mostrarContenido('desmayos', this)">Desmayos</div>
+                        <div class="menu-item" onclick="mostrarContenido('atragantamiento', this)">
+                            Atragantamiento</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Fin menú -->
+
+            <!-- Inicio default....  -->
+            <div class="col-12 col-md-8 mt-3">
+                <div id="contenido-tema"></div>
+                <div id="bloque-inicial">
+                    <!-- Barra horizontal con nombre de la sección -->
+                    <div
+                        class="d-flex justify-content-center my-4 bg-color8 w-50 mx-auto rounded opacity-75 text-uppercase shadow-sm">
+                        <div class="rounded-container p-3 text-center">
+                            <h3 id="titulo-quizz" class="mb-0">Primeros Auxilios</h3>
+                        </div>
+                    </div>
+                    <div class="container py-4">
+                        <div class="row justify-content-center g-4">
+                            <!-- Fila superior -->
+                            <div class="col-md-5">
+                                <div class="bg-color7 text-white p-3 text-center rounded opacity-75 shadow-lg">
+                                    <h4>Aprende a mantener la calma y ayudar</h4>
+                                    <p>Los primeros segundos en una emergencia importan. Aquí verás y leerás qué hacer,
+                                        paso
+                                        a paso, para actuar sin miedo cuando alguien más lo necesita.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="bg-color7 text-white p-3 text-center rounded opacity-75 shadow-lg">
+                                    <h4>Primeros auxilios desde cero, para todos</h4>
+                                    <p>No necesitas experiencia previa. Este espacio te enseña desde lo más básico con
+                                        explicaciones simples, ejemplos cotidianos y videos que muestran cómo hacerlo
+                                        bien.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Fila inferior -->
+                            <div class="col-md-5">
+                                <div class="bg-color7 text-white p-3 text-center rounded opacity-75 shadow-lg">
+                                    <h4>Conocimiento que se queda contigo</h4>
+                                    <p>Con cada video y lectura, sumarás herramientas útiles que podrás aplicar en casa,
+                                        en
+                                        el colegio o en cualquier lugar. Saber primeros auxilios es un acto de cuidado.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="bg-color7 text-white p-3 text-center rounded opacity-75 shadow-lg">
+                                    <h4>Ciencia y empatía para actuar bien</h4>
+                                    <p>Cada tema está respaldado por información actualizada y explicado con
+                                        sensibilidad.
+                                        Porque saber primeros auxilios es combinar conocimiento y humanidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-color1 w-50 mx-auto mt-3 p-4 rounded-4 shadow-sm">
+                        <h2 class="text-center">Selecciona un tema del menú</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin inicio default ..... -->
+
+            <!--Botones-->
+            <div class="col-2 superpuesta me-3">
+                <div class="d-flex align-items-end flex-column">
+                    <!-- Botón 1: Desafíos -->
+                    <div class="circle-container hover-expand bg-color1" onclick="window.location.href='perfil.html'">
+                        <div class="icon">
+                            <i class="fa-solid fa-cat"></i>
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-solid fa-cat fa-2x mb-1"></i>
+                            <h2 class="mb-1">Desafíos</h2>
+                            <i class="fa-solid fa-circle fa-sm mb-2"></i>
+                            <p class="small">Supera retos únicos cada día.</p>
+                        </div>
+                    </div>
+
+                    <!-- Botón 2: Quiz -->
+                    <div class="circle-container hover-expand bg-color3 mt-3"
+                        onclick="window.location.href='quiz.html'">
+                        <div class="icon">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-solid fa-calculator fa-2x"></i>
+                            <h2>Quiz</h2>
+                            <i class="fa-solid fa-circle"></i>
+                            <p>Responde y aprende jugando.</p>
+                        </div>
+                    </div>
+
+                    <!-- Botón 3: Multimedia -->
+                    <div class="circle-container hover-expand bg-color7 mt-3"
+                        onclick="window.location.href='multimedia.html'">
+                        <div class="icon">
+                            <i class="fa-regular fa-circle-play"></i>
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-regular fa-circle-play fa-2x"></i>
+                            <h2>Multimedia</h2>
+                            <i class="fa-solid fa-circle"></i>
+                            <p>Videos y sonidos para explorar.</p>
+                        </div>
+                    </div>
+
+                    <!-- Botón 4: Diario -->
+                    <div class="circle-container hover-expand bg-color8 mt-3"
+                        onclick="window.location.href='diario.html'">
+                        <div class="icon">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div class="card-content d-flex flex-column align-items-center text-center">
+                            <i class="fa-regular fa-calendar-days fa-2x"></i>
+                            <h2>Diario</h2>
+                            <i class="fa-solid fa-circle"></i>
+                            <p>Escribe tus experiencias diarias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fin de los botones-->
+        </div>
+
+    </main>
+
+    <!-- Sidebar móvil -->
+    <div class="offcanvas offcanvas-start bg-color7 opacity-75" data-bs-scroll="true" data-bs-backdrop="false"
+        tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="mostrarContenidoDesdeMovil('rcp', this)">Rcp</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="mostrarContenidoDesdeMovil('convulsiones', this)">Convulsiones</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="mostrarContenidoDesdeMovil('fracturas', this)">Fracturas</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="mostrarContenidoDesdeMovil('quemaduras', this)">Quemaduras</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="mostrarContenidoDesdeMovil('shock-anafilactico', this)">Shock
+                    anafiláctico</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="mostrarContenidoDesdeMovil('hemorragias', this)">Hemorragias</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link" onclick="mostrarContenidoDesdeMovil('desmayos', this)">Desmayos</a>
+            </div>
+            <div class="menu-item mb-2">
+                <a href="#" class="nav-link"
+                    onclick="mostrarContenidoDesdeMovil('atragantamiento', this)">Atragantamiento</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Sidebar móvil -->
+
+    <!-- Botón hamburguesa flotante solo visible en móviles -->
+    <button id="btnHamburguesa" class="btn rounded-circle d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Fin del botón hamburguesa -->
+
+    <!--Scripts Externos-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <!--Scripts Internos-->
+    <script src="assets/js/funcion-multi-2.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
