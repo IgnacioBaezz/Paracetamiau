@@ -1,10 +1,10 @@
-/* Tarjeta del carrusel */ 
+/* Tarjeta del carrusel */
 .carrusel-tarjeta {
-  background-color: #005f60; 
-  border-radius: 40px; 
+  background-color: #005f60;
+  border-radius: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-  padding: 20px; 
-  text-align: center;  
+  padding: 20px;
+  text-align: center;
   color: white;
   position: relative;
   margin-top: -30px;
@@ -12,42 +12,41 @@
 
 /* Título dentro de la tarjeta */
 .carrusel-tarjeta h3 {
-  font-family: 'Madimi One', sans-serif; 
-  font-size: 1.5rem; 
-  margin-bottom: 45px; 
+  font-size: 1.5rem;
+  margin-bottom: 45px;
 }
 
 /* Imágenes dentro del carrusel */
 .carrusel-tarjeta .carousel-inner img {
   border: 5px solid #FF6F61;
-  border-radius: 15px; 
-  max-height: 250px; 
-  object-fit: cover; 
+  border-radius: 15px;
+  max-height: 250px;
+  object-fit: cover;
 }
 
 /* Botones del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
-  top: 50%;  
+  top: 50%;
   transform: translateY(-50%);
-  width: 3rem; 
+  width: 3rem;
   height: 3rem;
-  background-color: #ffffffa5; 
-  border-radius: 90%; 
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4); 
-  display: flex; 
+  background-color: #ffffffa5;
+  border-radius: 90%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1; 
+  opacity: 1;
 }
 
 /* Posición de los botones izquierdo y derecho */
 .carousel-control-prev {
-  left: -90px;  
+  left: -90px;
 }
 
 .carousel-control-next {
-  right: -90px;  
+  right: -90px;
 }
 
 /* Icono flecha blanca con sombra */
@@ -57,34 +56,24 @@
   width: auto;
   height: auto;
   font-size: 2rem;
-  color: white; 
-  font-weight: bold; 
-  text-shadow: 2px 2px 2px #333; 
-}
-
-/* Flecha izquierda */
-.carousel-control-prev-icon::after {
-  content: '‹';  
-}
-
-/* Flecha derecha */
-.carousel-control-next-icon::after {
-  content: '›';  
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #333;
 }
 
 /* Botón exportar a PDF */
 .btn-exportar {
-  background-color: #008080;  
-  color: white;  
-  border-radius: 20px;  
-  font-weight: bold;  
-  transition: 0.3s ease;  
-  padding: 8px 16px;  
-  margin-top: 15px;  
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+  background-color: #008080;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  padding: 8px 16px;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Hover del botón exportar */
 .btn-exportar:hover {
-  background-color: #00a3a3;  
+  background-color: #00a3a3;
 }
