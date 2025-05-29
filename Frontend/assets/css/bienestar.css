@@ -1,10 +1,13 @@
 .small-carousel {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     position: relative;
     max-width: 90%;
 }
-
+.text-v{
+  display: flex;
+  align-items: center;
+}
 
 .streak-wrapper {
   max-width: 500px;
@@ -46,8 +49,8 @@
 }
 
 .card-container {
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 400px;
   opacity: 0.6;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
