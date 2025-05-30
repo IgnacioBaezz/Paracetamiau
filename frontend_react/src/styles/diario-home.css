@@ -1,0 +1,68 @@
+.small-carousel {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    max-width: 90%;
+}
+.text-v{
+  display: flex;
+  align-items: center;
+}
+
+.streak-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.streak-title {
+  font-size: 1.0rem;
+  color: white;
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.streak-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 30px;
+  height: 30px;
+  background-color:var(--color4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.0rem;
+  color: #a4a2a2;
+
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.day.completed {
+  color: var(--color8);
+}
+
+.card-container {
+  height: 300px;
+  width: 400px;
+  opacity: 0.6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bg-button {
+    background-color: var(--color3);
+    border: none;
+    padding: 12px 40px;;
+    position: relative;
+    max-width: 90%;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow:  0 4px 6px rgba(0,0,0,0.1);
+    color: var(--color4);
+}
