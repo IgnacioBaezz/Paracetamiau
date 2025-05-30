@@ -1,20 +1,20 @@
-// Estilos generales
 import "../styles/styles.css";
 import "../styles/variables.css";
 import "../styles/backgrounds.css";
+import "../styles/carruselEstadisticas.css";
 
 // Componentes
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
-import PerfilForm from "../components/PerfilForm";
+import CarruselEstadisticas from "../components/CarruselEstadisticas";
 
-function Perfil() {
+function Estadisticas() {
   return (
     <>
-      <Navbar titulo="Perfil" />
-      <main className="container-fluid">
+      <Navbar titulo="Estadísticas" />
+      <main className="container-fluid bg-fish">
         <div className="row position-relative">
-          <PerfilForm />
+          <CarruselEstadisticas />
           <BotonesMenu />
         </div>
       </main>
@@ -22,4 +22,4 @@ function Perfil() {
   );
 }
 
-export default Perfil;
+export default Estadisticas;

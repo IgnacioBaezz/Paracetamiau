@@ -10,6 +10,7 @@ import Multimedia from "./pages/Multimedia.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Quiz from "./pages/Quiz.jsx";
 import DiarioHome from "./pages/DiarioHome.jsx";
+import Estadisticas from "./pages/Estadisticas.jsx";
 
 // Estilos
 import "./styles/variables.css";
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
   { path: "/multimedia", element: <Multimedia /> },
   { path: "/perfil", element: <Perfil /> },
   { path: "/quiz", element: <Quiz /> },
+  { path: "/estadisticas", element: <Estadisticas /> },
+
 ]);
 
 createRoot(document.getElementById("root")).render(
