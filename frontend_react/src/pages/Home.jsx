@@ -7,6 +7,8 @@ import "../styles/backgrounds.css";
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
 
+
+
 const Home = () => {
   return (
     <>
