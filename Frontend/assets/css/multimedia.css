@@ -1,14 +1,13 @@
 .main-container {
     flex: 1;
     display: flex;
-    background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
     position: relative;
     overflow: hidden;
 }
 
 .sidebar {
     width: 250px;
-    background: rgba(78, 205, 196, 0.9);
+    background: rgba(78, 205, 196, 0.8);
     backdrop-filter: blur(10px);
     padding: 30px 0;
     box-shadow: 5px 0 20px rgba(0,0,0,0.1);

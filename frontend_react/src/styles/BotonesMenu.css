@@ -70,6 +70,15 @@
   z-index: 1000;
 }
 
+.superpuesta {
+  position: absolute;
+  top: 20px;
+  /* Ajusta según dónde quieres posicionarlo */
+  right: 0;
+  /* O usa left: 0 para alinearlo a la izquierda */
+  z-index: 10;
+}
+
 @media (max-width: 767.98px) {
 
   /* En móvil, reducimos un poco los circle-container para que quepan bien */
