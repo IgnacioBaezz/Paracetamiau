@@ -7,18 +7,18 @@ import "../styles/backgrounds.css";
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
 
-const Diario = () => {
+const DiarioHome = () => {
   return (
     <>
-      <Navbar titulo="Diario" />
+      <Navbar titulo="Diario de Bienestar" />
       <main className="container-fluid">
         <div className="row position-relative">
-          <h2>Lala Diario</h2>
           <BotonesMenu />
+          <h2>Lala DiarioHome</h2>
         </div>
       </main>
     </>
   );
 };
 
-export default Diario;
+export default DiarioHome;
