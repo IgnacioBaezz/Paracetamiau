@@ -48,13 +48,50 @@
  .calendar-day.other-month {
      opacity: 0.5;
  }
+ .progress-card {
+     background: linear-gradient(135deg, var(--color7), var(--color2));
+     border-radius: 20px;
+     padding: 20px;
+     color: white;
+     margin-top: 20px;
+     text-align: center;
+     box-shadow: 0 10px 30px rgba(34, 2, 2, 0.3);
+ }
+ .progress-title {
+     font-size: 1.2rem;
+     font-weight: 600;
+     margin-bottom: 15px;
+ }
  
+ .progress-bar {
+    width: 100%;
+  max-width: 300px;
+  height: 25px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto 15px;
+ }
+ .progress-bar::before {
+    height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--coral), #ffb199);
+  transition: width 0.6s ease;
+  border-radius: 15px 0 0 15px;
+ }
+ .progress-text {
+     position: relative;
+     z-index: 2;
+     font-size: 1.5rem;
+ }
  .mood-section {
      background: var(--color7);
      border-radius: 20px;
      padding: 20px;
      color: white;
      margin-bottom: 20px;
+     margin-top: 20px;
      box-shadow: 0 10px 30px rgba(71, 191, 204, 0.3);
  }
  .mood-title {
@@ -98,7 +135,7 @@
      gap: 15px;
  }
  .habit-item {
-     background: var(--color3);
+     background: var(--color4);
      border-radius: 25px;
      padding: 15px 20px;
      display: flex;
@@ -118,6 +155,22 @@
      height: 100%;
      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
      transition: left 0.5s;
+ }
+  .habit-item:hover::before {
+     left: 100%;
+ }
+ .habit-item:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+ }
+ .habit-item.water {
+     border-left: 5px solid var(--color7);
+ }
+ .habit-item.exercise {
+     border-left: 5px solid var(--color2);
+ }
+ .habit-item.sleep {
+     border-left: 5px solid var(--color6);
  }
   .habit-icon {
      width: 45px;
@@ -196,4 +249,33 @@
      border-left: 10px solid white;
      border-top: 10px solid transparent;
      border-bottom: 10px solid transparent;
+ }
+
+ .celebration {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+     z-index: 9999;
+     display: none;
+ }
+  .confetti {
+     position: absolute;
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     animation: confetti-fall 3s linear infinite;
+ }
+  @keyframes confetti-fall {
+     0% {
+         transform: translateY(-100vh) rotate(0deg);
+         opacity: 1;
+     }
+
+     100% {
+         transform: translateY(100vh) rotate(720deg);
+         opacity: 0;
+     }
  }

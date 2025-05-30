@@ -42,15 +42,14 @@ function toggleHabit(element, habitType) {
 }
 
 function updateProgress() {
-    const progressCircle = document.getElementById('progressCircle');
+    const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('progressText');
     const progressMessage = document.getElementById('progressMessage');
 
     const percentage = (completedHabits / totalHabits) * 100;
-    const degrees = (percentage / 100) * 360;
 
-    progressCircle.style.background = `conic-gradient(white 0deg ${degrees}deg, rgba(255,255,255,0.3) ${degrees}deg 360deg)`;
-    progressText.textContent = `${completedHabits}/${totalHabits}`;
+  progressBar.style.width = `${percentage}%`;
+  progressText.textContent = `${completedHabits}/${totalHabits}`;
 
     const messages = [
         '¡Comienza tu día saludable!',

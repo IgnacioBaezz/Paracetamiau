@@ -88,6 +88,13 @@
                                 <div class="calendar-day other-month">2</div>
                             </div>
                         </div>
+                        <div class="progress-card">
+                            <div class="progress-title">Progreso del Día</div>
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-text" id="progressText">0/3</div>
+                            </div>
+                            <div id="progressMessage">¡Comienza tu día saludable!</div>
+                        </div>
                     </div>
                     <!-- Calendar End -->
 
@@ -109,7 +116,6 @@
                             </div>
                             <!-- Habits start -->
                             <div class="habits-section">
-                                <div class="habit-item">
                                   <div class="habit-item water" onclick="toggleHabit(this, 'water')">
                                     <div class="habit-icon">
                                       <img src="assets/img/vaso-vector.svg" alt="vaso-agua">
@@ -117,8 +123,7 @@
                                     <div class="habit-text">¿Ya bebí agua?</div>
                                     <div class="habit-toggle" id="toggle-water"></div>
                                   </div>
-                                </div>
-                                <div class="habit-item">
+                                
                                   <div class="habit-item exercise" onclick="toggleHabit(this, 'exercise')">
                                     <div class="habit-icon">
                                       <img src="assets/img/pesa-vector.svg" alt="pesa">
@@ -126,8 +131,6 @@
                                     <div class="habit-text">¿Ya hice ejercicio?</div>
                                     <div class="habit-toggle" id="toggle-exercise"></div>
                                   </div>
-                                </div>
-                                <div class="habit-item">
                                   <div class="habit-item sleep" onclick="toggleHabit(this, 'sleep')">
                                     <div class="habit-icon">
                                       <img src="assets/img/dormir-vector.svg" alt="durmiendo">
@@ -135,7 +138,6 @@
                                     <div class="habit-text">¿Dormi 8 horas?</div>
                                     <div class="habit-toggle" id="toggle-sleep"></div>
                                   </div>
-                                </div>
                             </div>
                     </div>
                 </div>
@@ -224,6 +226,9 @@
         <div class="floating-paw" onclick="showEncouragement()">
             🐾
         </div>
+
+        <!-- confeti -->
+         <div class="celebration" id="celebration"></div>
     </main>
 <script src="assets/js/lala.js"></script>
 </body>
