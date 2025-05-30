@@ -1,0 +1,57 @@
+/* Estilos para hacer scroll solo en la columna central */
+
+/* Contenedor principal con altura fija */
+.main-container-scroll {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Row principal con altura específica */
+  .row-scroll {
+    height: calc(100vh - 120px); /* Ajusta según la altura de tu navbar */
+  }
+  
+  /* Columna izquierda fija */
+  .col-left-fixed {
+    height: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+  }
+  
+  /* Columna central con scroll */
+  .col-center-scroll {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 15px; /* Espacio para la scrollbar */
+  }
+  
+  /* Columna derecha fija */
+  .col-right-fixed {
+    height: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+  }
+  
+  /* Personalizar scrollbar (opcional) */
+  .col-center-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .col-center-scroll::-webkit-scrollbar-track {
+    /* background: rgba(0, 0, 0, 0); */
+    border-radius: 10px;
+  }
+  
+  .col-center-scroll::-webkit-scrollbar-thumb {
+    /* background: rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+  }
+  
+  /* Asegurar que el contenido del zigzag tenga suficiente altura para hacer scroll */
+  .zigzag-container {
+    min-height: 150vh; /* Aumenta esta altura según necesites más contenido */
+    padding: 20px 0;
+  }
