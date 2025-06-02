@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/PerfilForm.css";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 
 const PerfilForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
+
   return (
     <main className="container-fluid bg-fish">
       <div className="row position-relative">
@@ -15,6 +22,7 @@ const PerfilForm = () => {
             </div>
 
             <form aria-label="Formulario de perfil de usuario">
+              {/* Nombre */}
               <div className="mb-3">
                 <label htmlFor="nombre" className="form-label fw-semibold text-white form-label-custom">
                   NOMBRE:
@@ -27,6 +35,7 @@ const PerfilForm = () => {
                 />
               </div>
 
+              {/* Correo */}
               <div className="mb-3">
                 <label htmlFor="correo" className="form-label fw-semibold text-white form-label-custom">
                   CORREO:
@@ -39,16 +48,22 @@ const PerfilForm = () => {
                 />
               </div>
 
+              {/* Contraseña */}
               <div className="mb-3">
                 <label htmlFor="contrasena" className="form-label fw-semibold text-white form-label-custom">
                   CONTRASEÑA:
                 </label>
-                <input
-                  type="password"
-                  className="form-control border-0 rounded-pill text-white form-input-contrasena"
-                  id="contrasena"
-                  name="contrasena"
-                />
+                <div className="input-password-wrapper">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="form-control border-0 rounded-pill text-white form-input-contrasena"
+                    id="contrasena"
+                    name="contrasena"
+                  />
+                  <span className="password-icon" onClick={togglePasswordVisibility}>
+                    {showPassword ? <BsEyeSlash /> : <BsEye />}
+                  </span>
+                </div>
               </div>
             </form>
           </div>
