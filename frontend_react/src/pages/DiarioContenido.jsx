@@ -9,8 +9,7 @@ import "../styles/DiarioContenido.css";
 // Componenetes
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
-import CalendarioBienestar from "../components/CalendarioBienestar";
-import Habitos from "../components/Habitos"
+import Animaciones from "../components/Animaciones";
 
 
 const DiarioContenido = () => {
@@ -22,8 +21,7 @@ const DiarioContenido = () => {
           <BotonesMenu />
         <div className="col-12">
             <div className="row justify-content-center align-items-center mt-5">
-                <CalendarioBienestar/>
-                <Habitos/>
+                <Animaciones/>
             </div>
         </div>
 
