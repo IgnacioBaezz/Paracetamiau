@@ -8,6 +8,8 @@ import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
 import GatoChat from "../components/GatoChat";
 
+
+
 const Home = () => {
   return (
     <>
