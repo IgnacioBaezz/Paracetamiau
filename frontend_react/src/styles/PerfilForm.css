@@ -1,0 +1,114 @@
+:root {
+  /* Sombras */
+  --sombra-suave: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  --sombra-media: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  --sombra-fuerte: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.profile-container {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.user-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #c4c4c4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon {
+  opacity: 0.8;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  font-size: 2rem;
+}
+
+.profile-title {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: var(--sombra-suave);
+  margin-top: 1rem;
+}
+
+.form-label-custom {
+  text-shadow: var(--sombra-fuerte);
+  display: block;
+  margin-top: 1rem;
+}
+
+.form-input-nombre,
+.form-input-correo,
+.form-input-contrasena {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 0.3rem;
+  text-shadow: var(--sombra-media);
+  font-size: 1rem;
+}
+
+.form-input-nombre {
+  background-color: rgba(255, 162, 154, 0.603);
+}
+
+.form-input-correo {
+  background-color: rgba(255, 200, 195, 0.598);
+}
+
+.form-input-contrasena {
+  background-color: rgba(255, 255, 255, 0.68);
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(3, 125, 125, 0.5);
+  border: none;
+}
+
+/* ✅ Responsive design */
+@media (max-width: 768px) {
+  .profile-title {
+    font-size: 1.5rem;
+  }
+
+  .user-icon {
+    font-size: 1.8rem;
+  }
+
+  .form-input-nombre,
+  .form-input-correo,
+  .form-input-contrasena {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 0.8rem;
+  }
+
+  .profile-title {
+    font-size: 1.3rem;
+  }
+
+  .user-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .user-icon {
+    font-size: 1.5rem;
+  }
+}
