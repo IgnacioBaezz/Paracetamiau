@@ -6,6 +6,7 @@ import "../styles/backgrounds.css";
 // Componenetes
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
+import SidebarDesktop from "../components/SidebarDesktop";
 
 const Quiz = () => {
   return (
@@ -15,6 +16,7 @@ const Quiz = () => {
         <div className="row position-relative">
           <h2>Lala Quiz</h2>
           <BotonesMenu />
+          <SidebarDesktop />
         </div>
       </main>
     </>
