@@ -3,8 +3,9 @@
     max-width: 90%;
 }
 .text-v{
-  display: flex;
+  
   align-items: center;
+  color: white;
 }
 
 
