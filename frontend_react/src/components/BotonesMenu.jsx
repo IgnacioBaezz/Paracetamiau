@@ -6,7 +6,7 @@ const BotonesMenu = () => {
 
   return (
     <>
-      <div className="col-3 superpuesta d-none d-md-block me-2">
+      <div className="col-2 superpuesta d-none d-md-block me-2">
         <div className="d-flex align-items-end flex-column">
           {/* Botón 1: Perfil */}
           <div

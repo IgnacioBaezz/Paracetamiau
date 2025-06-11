@@ -1,0 +1,242 @@
+[
+  {
+    "model": "quiz.pregunta",
+    "pk": 1,
+    "fields": {
+      "texto": "¿Qué debes verificar primero al ver a alguien desmayado?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "desmayos"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 2,
+    "fields": {
+      "texto": "¿Qué hacer si una persona se desmaya y no responde en 10 segundos?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "desmayos"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 3,
+    "fields": {
+      "texto": "¿Cuál puede ser una causa médica grave detrás de un desmayo repentino?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "desmayos"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 4,
+    "fields": {
+      "texto": "¿Qué se debe hacer primero si una persona presenta convulsiones?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "convulsiones"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 5,
+    "fields": {
+      "texto": "¿Cuál es una acción adecuada durante una convulsión?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "convulsiones"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 6,
+    "fields": {
+      "texto": "¿Cuál es una complicación médica crítica tras convulsiones prolongadas?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "convulsiones"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 7,
+    "fields": {
+      "texto": "¿Qué indica una hemorragia arterial?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "hemorragias"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 8,
+    "fields": {
+      "texto": "¿Qué técnica es adecuada para controlar una hemorragia?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "hemorragias"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 9,
+    "fields": {
+      "texto": "¿Qué riesgo existe si una hemorragia no se detiene pronto?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "hemorragias"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 10,
+    "fields": {
+      "texto": "¿Qué hacer primero si alguien se quema con agua hirviendo?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "quemaduras"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 11,
+    "fields": {
+      "texto": "¿Cuál es la mejor forma de proteger una quemadura mientras llega ayuda?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "quemaduras"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 12,
+    "fields": {
+      "texto": "¿Qué signo indica una quemadura de tercer grado?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "quemaduras"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 13,
+    "fields": {
+      "texto": "¿Qué hacer si una persona comienza a atragantarse?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "atragantamiento"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 14,
+    "fields": {
+      "texto": "¿Cuál es la técnica de primeros auxilios para atragantamiento?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "atragantamiento"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 15,
+    "fields": {
+      "texto": "¿Qué hacer si la persona atragantada pierde el conocimiento?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "atragantamiento"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 16,
+    "fields": {
+      "texto": "¿Cuál es el primer paso al aplicar RCP?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "rcp"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 17,
+    "fields": {
+      "texto": "¿Cuántas compresiones por minuto se recomiendan en la RCP?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "rcp"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 18,
+    "fields": {
+      "texto": "¿Qué problema puede causar una RCP con ventilación excesiva?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "rcp"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 19,
+    "fields": {
+      "texto": "¿Cuál es un signo evidente de una fractura?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "fracturas"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 20,
+    "fields": {
+      "texto": "¿Qué es importante al inmovilizar una fractura?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "fracturas"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 21,
+    "fields": {
+      "texto": "¿Cuál complicación puede aparecer tras una fractura grave?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "fracturas"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 22,
+    "fields": {
+      "texto": "¿Cuál es un signo común del shock?",
+      "tipo": "seleccion_multiple",
+      "nivel": "facil",
+      "categoria": "shock"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 23,
+    "fields": {
+      "texto": "¿Qué hacer si una persona muestra signos de shock?",
+      "tipo": "seleccion_multiple",
+      "nivel": "intermedio",
+      "categoria": "shock"
+    }
+  },
+  {
+    "model": "quiz.pregunta",
+    "pk": 24,
+    "fields": {
+      "texto": "¿Qué situación médica puede causar shock séptico?",
+      "tipo": "seleccion_multiple",
+      "nivel": "dificil",
+      "categoria": "shock"
+    }
+  }
+]

@@ -6,6 +6,7 @@ import "../styles/backgrounds.css";
 // Componenetes
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
+import GatoChat from "../components/GatoChat";
 
 
 
@@ -16,7 +17,7 @@ const Home = () => {
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />
-          <h2>Lala Home</h2>
+          <GatoChat />
         </div>
       </main>
     </>
