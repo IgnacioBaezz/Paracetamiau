@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import confetti from 'canvas-confetti';
-import '../styles/DiarioContenido.css';
+import { useEffect, useState } from "react";
+// import confetti from 'canvas-confetti';
+import "../styles/DiarioContenido.css";
 
 export default function Animaciones() {
   const [habits, setHabits] = useState({
@@ -14,10 +14,10 @@ export default function Animaciones() {
   const completedHabits = Object.values(habits).filter(Boolean).length;
 
   const messages = [
-    '¡Comienza tu día saludable!',
-    '¡Buen comienzo! Sigue así',
-    '¡Casi lo logras! Un paso más',
-    '¡Felicitaciones! Día perfecto 🎉',
+    "¡Comienza tu día saludable!",
+    "¡Buen comienzo! Sigue así",
+    "¡Casi lo logras! Un paso más",
+    "¡Felicitaciones! Día perfecto 🎉",
   ];
 
   useEffect(() => {
@@ -50,7 +50,14 @@ export default function Animaciones() {
         angle: Math.random() * 360,
         spread: 60,
         origin: { x: Math.random(), y: Math.random() - 0.2 },
-        colors: ['#ff6f61', '#ffa29a', '#ffc8c3', '#c3e8ea', '#9acbd0', '#47bfcc'],
+        colors: [
+          "#ff6f61",
+          "#ffa29a",
+          "#ffc8c3",
+          "#c3e8ea",
+          "#9acbd0",
+          "#47bfcc",
+        ],
       });
     }
     if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
@@ -64,17 +71,21 @@ export default function Animaciones() {
           <div className="calendar-card">
             <div className="calendar-title">Calendario de bienestar</div>
             <div className="calendar-grid">
-              {['D', 'L', 'M', 'M', 'J', 'V', 'S'].map((d) => (
-                <div className="calendar-day-header" key={d}>{d}</div>
+              {["D", "L", "M", "M", "J", "V", "S"].map((d) => (
+                <div className="calendar-day-header" key={d}>
+                  {d}
+                </div>
               ))}
               {[
-                ...['29', '30', '31'].map((d) => ({ day: d, other: true })),
+                ...["29", "30", "31"].map((d) => ({ day: d, other: true })),
                 ...Array.from({ length: 31 }, (_, i) => ({ day: i + 1 })),
-                ...['1', '2'].map((d) => ({ day: d, other: true })),
+                ...["1", "2"].map((d) => ({ day: d, other: true })),
               ].map((obj, idx) => (
                 <div
                   key={idx}
-                  className={`calendar-day ${obj.other ? 'other-month' : ''} ${activeDay === idx ? 'active' : ''}`}
+                  className={`calendar-day ${obj.other ? "other-month" : ""} ${
+                    activeDay === idx ? "active" : ""
+                  }`}
                   onClick={() => handleDayClick(idx)}
                 >
                   {obj.day}
@@ -107,16 +118,16 @@ export default function Animaciones() {
             <textarea className="form-control" rows="3" />
             <div className="mood-icons">
               {[
-                { id: 'happy', img: 'feliz.svg' },
-                { id: 'calm', img: 'Calma.svg' },
-                { id: 'neutral', img: 'Neutral.svg' },
-                { id: 'sad', img: 'Tristeza.svg' },
-                { id: 'ansious', img: 'Ansiedad.svg' },
-                { id: 'angry', img: 'Enojo.svg' },
+                { id: "happy", img: "feliz.svg" },
+                { id: "calm", img: "Calma.svg" },
+                { id: "neutral", img: "Neutral.svg" },
+                { id: "sad", img: "Tristeza.svg" },
+                { id: "ansious", img: "Ansiedad.svg" },
+                { id: "angry", img: "Enojo.svg" },
               ].map(({ id, img }) => (
                 <div
                   key={id}
-                  className={`mood-icon ${selectedMood === id ? 'active' : ''}`}
+                  className={`mood-icon ${selectedMood === id ? "active" : ""}`}
                   data-mood={id}
                   onClick={() => handleMoodClick(id)}
                 >
@@ -129,9 +140,17 @@ export default function Animaciones() {
           {/* Hábitos */}
           <div className="habits-section">
             {[
-              { key: 'water', text: '¿Ya bebí agua?', icon: 'vaso-vector.svg' },
-              { key: 'exercise', text: '¿Ya hice ejercicio?', icon: 'pesa-vector.svg' },
-              { key: 'sleep', text: '¿Dormi 8 horas?', icon: 'dormir-vector.svg' },
+              { key: "water", text: "¿Ya bebí agua?", icon: "vaso-vector.svg" },
+              {
+                key: "exercise",
+                text: "¿Ya hice ejercicio?",
+                icon: "pesa-vector.svg",
+              },
+              {
+                key: "sleep",
+                text: "¿Dormi 8 horas?",
+                icon: "dormir-vector.svg",
+              },
             ].map(({ key, text, icon }) => (
               <div
                 key={key}
@@ -142,7 +161,9 @@ export default function Animaciones() {
                   <img src={`../src/assets/img/${icon}`} alt={text} />
                 </div>
                 <div className="habit-text">{text}</div>
-                <div className={`habit-toggle ${habits[key] ? 'active' : ''}`} />
+                <div
+                  className={`habit-toggle ${habits[key] ? "active" : ""}`}
+                />
               </div>
             ))}
           </div>
@@ -154,15 +175,16 @@ export default function Animaciones() {
         className="floating-paw"
         onClick={() => {
           const encouragements = [
-            '¡Tú puedes hacerlo!',
-            '¡Un día a la vez!',
-            '¡Cuidarte es importante!',
-            '¡Sigue así, campeón(a)!',
-            '¡Tu bienestar importa!',
-            '¡No tienes que ser perfecto(a), tienes que ser tú!'
+            "¡Tú puedes hacerlo!",
+            "¡Un día a la vez!",
+            "¡Cuidarte es importante!",
+            "¡Sigue así, campeón(a)!",
+            "¡Tu bienestar importa!",
+            "¡No tienes que ser perfecto(a), tienes que ser tú!",
           ];
-          const msg = encouragements[Math.floor(Math.random() * encouragements.length)];
-          const div = document.createElement('div');
+          const msg =
+            encouragements[Math.floor(Math.random() * encouragements.length)];
+          const div = document.createElement("div");
           div.style.cssText = `
             position: fixed;
             margin-bottom: 10px;
@@ -187,4 +209,3 @@ export default function Animaciones() {
     </div>
   );
 }
-
