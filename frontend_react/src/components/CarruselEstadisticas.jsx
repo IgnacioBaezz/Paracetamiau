@@ -38,10 +38,9 @@ function CarruselEstadisticas() {
   };
 
   return (
-    <section className="container my-5">
+    <section className="container my-5 col-12 col-md-10">
       <div className="row justify-content-center">
         <div className="col-12 col-md-10 col-lg-8 position-relative">
-
           {/* Tarjeta del carrusel */}
           <div className="carrusel-tarjeta">
             <h3>{slides[activeIndex].titulo}</h3>
@@ -77,7 +76,6 @@ function CarruselEstadisticas() {
           <div className="text-center">
             <button className="btn btn-exportar">Exportar PDF</button>
           </div>
-
         </div>
       </div>
     </section>

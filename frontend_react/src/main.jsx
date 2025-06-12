@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   { path: "/multimedia", element: <Multimedia /> },
   { path: "/perfil", element: <Perfil /> },
   { path: "/quiz", element: <Quiz /> },
-  { path: "/estadisticas", element: <Estadisticas /> },
+  { path: "/diarioEstadisticas", element: <Estadisticas /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
