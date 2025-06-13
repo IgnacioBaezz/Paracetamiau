@@ -2,14 +2,13 @@ from rest_framework import viewsets, status, filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.contrib.auth import authenticate
 from .models import Usuario
 from .serializers import UsuarioSerializer, UsuarioListSerializer, UsuarioPerfilSerializer
 
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.filter(is_active=True)
-    permission_classes = [IsAuthenticated]
     serializer_class = UsuarioSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['is_active', 'esta_verificado', 'recibir_mensajes']
@@ -23,6 +22,12 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         elif self.action == 'perfil':
             return UsuarioPerfilSerializer
         return UsuarioSerializer
+    
+    def get_permissions(self):
+        """Modificar los permisos según la acción."""
+        if self.action == 'create':
+            return [AllowAny()]
+        return [IsAuthenticated()]
     
     def create(self, request, *args, **kwargs):
         """Crear nuevo usuario"""

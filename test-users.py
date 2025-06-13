@@ -98,6 +98,15 @@ def eliminar_usuario():
     else:
         print("❌ Error al eliminar usuario:", response.text)
 
+def ver_perfil():
+    user_id = input("ID del usuario: ")
+    response = api_request(f"/usuarios/{user_id}/perfil/", token=token)
+    if response.status_code == 200:
+        print("✅ Perfil:")
+        print(response.json())
+    else:
+        print("❌ Error al obtener el perfil.", response.text)
+
 def cambiar_password():
     user_id = input("ID del usuario: ")
     new_password = input("Nueva contraseña: ")
@@ -129,9 +138,10 @@ def menu_usuarios():
         print("3. Ver un usuario")
         print("4. Editar usuario")
         print("5. Eliminar usuario")
-        print("6. Cambiar contraseña")
-        print("7. Ver estadísticas")
-        print("8. Salir")
+        print("6. Ver perfil")
+        print("7. Cambiar contraseña")
+        print("8. Ver estadísticas")
+        print("0. Salir")
 
         opcion = input("Opción: ")
 
@@ -146,14 +156,28 @@ def menu_usuarios():
         elif opcion == "5":
             eliminar_usuario()
         elif opcion == "6":
-            cambiar_password()
+            ver_perfil()
         elif opcion == "7":
-            ver_estadisticas()
+            cambiar_password()
         elif opcion == "8":
-            print("👋 Adiós.")
+            ver_estadisticas()
+        elif opcion == "0":
+            print("Adiós.")
             break
         else:
             print("❗ Opción no válida.")
 
 if __name__ == "__main__":
     menu_usuarios()
+
+# Las URLs generadas automáticamente serán:
+# GET    /api/usuarios/                       - Listar usuarios
+# POST   /api/usuarios/                       - Crear usuario  
+# GET    /api/usuarios/{id}/                  - Detalle usuario
+# PUT    /api/usuarios/{id}/                  - Actualizar usuario completo
+# PATCH  /api/usuarios/{id}/                  - Actualizar usuario parcial
+# DELETE /api/usuarios/{id}/                  - Desactivar usuario
+# GET    /api/usuarios/{id}/perfil/           - Perfil público
+# POST   /api/usuarios/{id}/cambiar_password/ - Cambiar contraseña
+# GET    /api/usuarios/estadisticas/          - Estadísticas
+# GET    /api/usuarios/{id}/mi_perfil/        - Mi perfil completo
