@@ -20,10 +20,13 @@ function CarruselEstadisticas() {
   }, []);
 
   return (
-    <section className="container mt-2 mb-3">
+    <section className="container my-5 col-12 col-md-10">
       <div className="row justify-content-center">
         <div className="col-12 col-md-10 col-lg-8 position-relative">
-          <div id="miCarrusel" className="carousel slide" data-bs-ride="carousel">
+
+          {/* Tarjeta del carrusel */}
+          <div className="carrusel-tarjeta">
+            <h3>{slides[activeIndex].titulo}</h3>
             <div className="carousel-inner">
               {slides.map((slide, index) => (
                 <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>

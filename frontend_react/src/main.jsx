@@ -7,6 +7,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// Paginas
 import Index from "./pages/Index.jsx";
 import Home from "./pages/Home.jsx";
 import Multimedia from "./pages/Multimedia.jsx";
@@ -27,11 +28,12 @@ const router = createBrowserRouter([
   { path: "/", element: <Index /> },
   { path: "/home", element: <Home /> },
   { path: "/diario", element: <DiarioHome /> },
-  { path: "/diarioContenido", element: <DiarioContenido/>},
+  { path: "/diarioContenido", element: <DiarioContenido /> },
   { path: "/multimedia", element: <Multimedia /> },
   { path: "/perfil", element: <Perfil /> },
   { path: "/quiz", element: <Quiz /> },
   { path: "/estadisticas", element: <Estadisticas /> },
+
 ]);
 
 createRoot(document.getElementById("root")).render(

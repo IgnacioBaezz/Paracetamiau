@@ -1,0 +1,962 @@
+[
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 1,
+    "fields": {
+      "pregunta": 1,
+      "texto": "Si la persona responde o no responde",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 2,
+    "fields": {
+      "pregunta": 1,
+      "texto": "Si tiene heridas visibles",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 3,
+    "fields": {
+      "pregunta": 1,
+      "texto": "Si tiene fiebre",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 4,
+    "fields": {
+      "pregunta": 1,
+      "texto": "Si está cómodo",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 5,
+    "fields": {
+      "pregunta": 2,
+      "texto": "Llamar inmediatamente a emergencias (911)",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 6,
+    "fields": {
+      "pregunta": 2,
+      "texto": "Darle agua para que reaccione",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 7,
+    "fields": {
+      "pregunta": 2,
+      "texto": "Moverla para que esté más cómoda",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 8,
+    "fields": {
+      "pregunta": 2,
+      "texto": "Esperar 5 minutos más",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 9,
+    "fields": {
+      "pregunta": 3,
+      "texto": "Ataque cardíaco o arritmia",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 10,
+    "fields": {
+      "pregunta": 3,
+      "texto": "Cansancio por ejercicio",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 11,
+    "fields": {
+      "pregunta": 3,
+      "texto": "Hambre o sed",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 12,
+    "fields": {
+      "pregunta": 3,
+      "texto": "Estrés emocional leve",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 13,
+    "fields": {
+      "pregunta": 4,
+      "texto": "Proteger a la persona de lesiones",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 14,
+    "fields": {
+      "pregunta": 4,
+      "texto": "Sujetar firmemente a la persona",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 15,
+    "fields": {
+      "pregunta": 4,
+      "texto": "Ponerle algo en la boca",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 16,
+    "fields": {
+      "pregunta": 4,
+      "texto": "Echarle agua fría",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 17,
+    "fields": {
+      "pregunta": 5,
+      "texto": "Aflojar la ropa apretada",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 18,
+    "fields": {
+      "pregunta": 5,
+      "texto": "Intentar detener los movimientos",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 19,
+    "fields": {
+      "pregunta": 5,
+      "texto": "Dar medicamentos",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 20,
+    "fields": {
+      "pregunta": 5,
+      "texto": "Levantar a la persona",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 21,
+    "fields": {
+      "pregunta": 6,
+      "texto": "Estado epiléptico",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 22,
+    "fields": {
+      "pregunta": 6,
+      "texto": "Dolor de cabeza leve",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 23,
+    "fields": {
+      "pregunta": 6,
+      "texto": "Fatiga temporal",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 24,
+    "fields": {
+      "pregunta": 6,
+      "texto": "Mareo ligero",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 25,
+    "fields": {
+      "pregunta": 7,
+      "texto": "Sangre roja y pulsátil",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 26,
+    "fields": {
+      "pregunta": 7,
+      "texto": "Sangre oscura y continua",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 27,
+    "fields": {
+      "pregunta": 7,
+      "texto": "Sangre clara y lenta",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 28,
+    "fields": {
+      "pregunta": 7,
+      "texto": "Sangre espesa y coagulada",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 29,
+    "fields": {
+      "pregunta": 8,
+      "texto": "Presión directa sobre la herida",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 30,
+    "fields": {
+      "pregunta": 8,
+      "texto": "Aplicar hielo directamente",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 31,
+    "fields": {
+      "pregunta": 8,
+      "texto": "Limpiar la herida profundamente",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 32,
+    "fields": {
+      "pregunta": 8,
+      "texto": "Elevar la zona y esperar",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 33,
+    "fields": {
+      "pregunta": 9,
+      "texto": "Shock hipovolémico",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 34,
+    "fields": {
+      "pregunta": 9,
+      "texto": "Dolor leve",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 35,
+    "fields": {
+      "pregunta": 9,
+      "texto": "Cicatrización lenta",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 36,
+    "fields": {
+      "pregunta": 9,
+      "texto": "Cambio de color de piel",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 37,
+    "fields": {
+      "pregunta": 10,
+      "texto": "Enfriar inmediatamente con agua fría",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 38,
+    "fields": {
+      "pregunta": 10,
+      "texto": "Aplicar hielo directamente",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 39,
+    "fields": {
+      "pregunta": 10,
+      "texto": "Aplicar mantequilla o aceite",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 40,
+    "fields": {
+      "pregunta": 10,
+      "texto": "Reventar las ampollas",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 41,
+    "fields": {
+      "pregunta": 11,
+      "texto": "Cubrir con gasa estéril húmeda",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 42,
+    "fields": {
+      "pregunta": 11,
+      "texto": "Cubrir con algodón seco",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 43,
+    "fields": {
+      "pregunta": 11,
+      "texto": "Dejar al aire libre",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 44,
+    "fields": {
+      "pregunta": 11,
+      "texto": "Aplicar pomadas caseras",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 45,
+    "fields": {
+      "pregunta": 12,
+      "texto": "Piel carbonizada sin dolor",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 46,
+    "fields": {
+      "pregunta": 12,
+      "texto": "Piel roja con dolor intenso",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 47,
+    "fields": {
+      "pregunta": 12,
+      "texto": "Ampollas pequeñas",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 48,
+    "fields": {
+      "pregunta": 12,
+      "texto": "Hinchazón leve",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 49,
+    "fields": {
+      "pregunta": 13,
+      "texto": "Preguntarle si puede toser o hablar",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 50,
+    "fields": {
+      "pregunta": 13,
+      "texto": "Darle agua inmediatamente",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 51,
+    "fields": {
+      "pregunta": 13,
+      "texto": "Golpear fuertemente la espalda",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 52,
+    "fields": {
+      "pregunta": 13,
+      "texto": "Meter los dedos en la boca",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 53,
+    "fields": {
+      "pregunta": 14,
+      "texto": "Maniobra de Heimlich",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 54,
+    "fields": {
+      "pregunta": 14,
+      "texto": "Respiración boca a boca",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 55,
+    "fields": {
+      "pregunta": 14,
+      "texto": "Compresiones en el pecho",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 56,
+    "fields": {
+      "pregunta": 14,
+      "texto": "Posición de seguridad",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 57,
+    "fields": {
+      "pregunta": 15,
+      "texto": "Iniciar RCP inmediatamente",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 58,
+    "fields": {
+      "pregunta": 15,
+      "texto": "Continuar con Heimlich",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 59,
+    "fields": {
+      "pregunta": 15,
+      "texto": "Ponerla en posición lateral",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 60,
+    "fields": {
+      "pregunta": 15,
+      "texto": "Esperar a que reaccione sola",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 61,
+    "fields": {
+      "pregunta": 16,
+      "texto": "Verificar consciencia y respiración",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 62,
+    "fields": {
+      "pregunta": 16,
+      "texto": "Comenzar compresiones inmediatamente",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 63,
+    "fields": {
+      "pregunta": 16,
+      "texto": "Dar respiraciones de rescate",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 64,
+    "fields": {
+      "pregunta": 16,
+      "texto": "Buscar el pulso en la muñeca",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 65,
+    "fields": {
+      "pregunta": 17,
+      "texto": "100-120 compresiones por minuto",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 66,
+    "fields": {
+      "pregunta": 17,
+      "texto": "60-80 compresiones por minuto",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 67,
+    "fields": {
+      "pregunta": 17,
+      "texto": "140-160 compresiones por minuto",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 68,
+    "fields": {
+      "pregunta": 17,
+      "texto": "200 compresiones por minuto",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 69,
+    "fields": {
+      "pregunta": 18,
+      "texto": "Disminución del retorno venoso",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 70,
+    "fields": {
+      "pregunta": 18,
+      "texto": "Aumento de la presión arterial",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 71,
+    "fields": {
+      "pregunta": 18,
+      "texto": "Mejora inmediata del pulso",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 72,
+    "fields": {
+      "pregunta": 18,
+      "texto": "Estabilización del ritmo cardíaco",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 73,
+    "fields": {
+      "pregunta": 19,
+      "texto": "Deformidad visible del hueso",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 74,
+    "fields": {
+      "pregunta": 19,
+      "texto": "Dolor leve al tacto",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 75,
+    "fields": {
+      "pregunta": 19,
+      "texto": "Hinchazón mínima",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 76,
+    "fields": {
+      "pregunta": 19,
+      "texto": "Cambio de color en la piel",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 77,
+    "fields": {
+      "pregunta": 20,
+      "texto": "Inmovilizar por encima y debajo de la fractura",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 78,
+    "fields": {
+      "pregunta": 20,
+      "texto": "Mover para alinear el hueso",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 79,
+    "fields": {
+      "pregunta": 20,
+      "texto": "Aplicar calor para reducir dolor",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 80,
+    "fields": {
+      "pregunta": 20,
+      "texto": "Masajear la zona afectada",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 81,
+    "fields": {
+      "pregunta": 21,
+      "texto": "Síndrome compartimental",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 82,
+    "fields": {
+      "pregunta": 21,
+      "texto": "Dolor muscular leve",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 83,
+    "fields": {
+      "pregunta": 21,
+      "texto": "Cicatrización normal",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 84,
+    "fields": {
+      "pregunta": 21,
+      "texto": "Recuperación completa",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 85,
+    "fields": {
+      "pregunta": 22,
+      "texto": "Piel pálida y fría",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 86,
+    "fields": {
+      "pregunta": 22,
+      "texto": "Piel roja y caliente",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 87,
+    "fields": {
+      "pregunta": 22,
+      "texto": "Respiración lenta y profunda",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 88,
+    "fields": {
+      "pregunta": 22,
+      "texto": "Pulso fuerte y regular",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 89,
+    "fields": {
+      "pregunta": 23,
+      "texto": "Elevar las piernas y mantener caliente",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 90,
+    "fields": {
+      "pregunta": 23,
+      "texto": "Sentar a la persona inmediatamente",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 91,
+    "fields": {
+      "pregunta": 23,
+      "texto": "Dar líquidos fríos",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 92,
+    "fields": {
+      "pregunta": 23,
+      "texto": "Aplicar compresas frías",
+      "valor": 4,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 93,
+    "fields": {
+      "pregunta": 24,
+      "texto": "Infección grave no tratada",
+      "valor": 1,
+      "es_correcta": true
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 94,
+    "fields": {
+      "pregunta": 24,
+      "texto": "Resfriado común",
+      "valor": 2,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 95,
+    "fields": {
+      "pregunta": 24,
+      "texto": "Dolor de cabeza leve",
+      "valor": 3,
+      "es_correcta": false
+    }
+  },
+  {
+    "model": "quiz.opcionrespuesta",
+    "pk": 96,
+    "fields": {
+      "pregunta": 24,
+      "texto": "Fatiga por ejercicio",
+      "valor": 4,
+      "es_correcta": false
+    }
+  }
+]

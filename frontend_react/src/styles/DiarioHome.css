@@ -1,11 +1,13 @@
 .small-carousel {
-    position: relative;
-    max-width: 90%;
+  position: relative;
+  max-width: 90%;
 }
-.text-v{
-  
+
+.text-v {
+
   align-items: center;
   color: white;
+  text-decoration: none;
 }
 
 
@@ -13,17 +15,18 @@
   height: 300px;
   width: 400px;
   opacity: 0.6;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .bg-button {
-    background-color: var(--color3);
-    border: none;
-    padding: 12px 40px;;
-    position: relative;
-    max-width: 90%;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow:  0 4px 6px rgba(0,0,0,0.1);
-    color: var(--color4);
+  background-color: var(--color3);
+  border: none;
+  padding: 12px 40px;
+  ;
+  position: relative;
+  max-width: 90%;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--color4);
 }
