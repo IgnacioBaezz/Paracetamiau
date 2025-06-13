@@ -1,3 +1,7 @@
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 // Dependencias
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
@@ -13,7 +17,7 @@ import DiarioHome from "./pages/DiarioHome.jsx";
 import Estadisticas from "./pages/Estadisticas.jsx";
 import DiarioContenido from "./pages/DiarioContenido.jsx";
 
-// Estilos
+// Estilos personalizados
 import "./styles/variables.css";
 import "./styles/backgrounds.css";
 import "./styles/styles.css";
@@ -28,7 +32,8 @@ const router = createBrowserRouter([
   { path: "/multimedia", element: <Multimedia /> },
   { path: "/perfil", element: <Perfil /> },
   { path: "/quiz", element: <Quiz /> },
-  { path: "/diarioEstadisticas", element: <Estadisticas /> },
+  { path: "/estadisticas", element: <Estadisticas /> },
+
 ]);
 
 createRoot(document.getElementById("root")).render(
