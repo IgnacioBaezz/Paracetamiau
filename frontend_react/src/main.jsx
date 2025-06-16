@@ -23,6 +23,7 @@ import "./styles/backgrounds.css";
 import "./styles/styles.css";
 import "./styles/DiarioHome.css";
 import "./styles/DiarioContenido.css";
+import Formulario from './pages/Formulario.jsx';
 
 const router = createBrowserRouter([
   { path: "/", element: <Index /> },
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
   { path: "/perfil", element: <Perfil /> },
   { path: "/quiz", element: <Quiz /> },
   { path: "/estadisticas", element: <Estadisticas /> },
-
+  { path: "/formulario", element: <Formulario /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

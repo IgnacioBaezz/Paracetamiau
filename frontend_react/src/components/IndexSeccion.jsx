@@ -50,7 +50,7 @@ function IndexSeccion() {
 
         <p className="fw-bold mt-4">¡Comienza ahora!</p>
         <div className="botones-accion">
-          <button className="btn-principal" onClick={() => navigate("/login")}>
+          <button className="btn-principal" onClick={() => navigate("/formulario")}>
             Ingresar
           </button>
         </div>
