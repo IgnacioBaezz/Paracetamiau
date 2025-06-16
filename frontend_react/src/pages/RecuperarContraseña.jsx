@@ -6,7 +6,7 @@ import "../styles/backgrounds.css";
 // Componenetes
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
-import FormRecuperarContra from "../components/FormRecuperarContra";
+import FormRecuperarContra from "../components/FormRecuperaContra";
 
 const RecuperarContraseña = () => {
     return (

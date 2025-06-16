@@ -1,5 +1,6 @@
 .container-recupera {
   border-radius: 3%;
-  background-color: rgb(255, 200, 195, 0.7);
-  color: var(--color4) ;
+  background-color: rgb(195, 232, 234, 1);
+  color: white ;
+  padding-inline: 10%;
 }

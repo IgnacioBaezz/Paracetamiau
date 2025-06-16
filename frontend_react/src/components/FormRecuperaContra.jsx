@@ -3,9 +3,9 @@ import "../styles/Recupera.css";
 const FormRecuperarContra = () => {
 
     return (
-        <div className="row d-flex justify-content-center align-items-center mt-3">
-            <div className="col-8 col-md-7 col-lg-6 container-recupera">
-                <h1 className="text-center mt-5">Recuperar contraseña</h1>
+        <div className="row d-flex justify-content-center align-items-center mb-2">
+            <div className="col-8 container-recupera">
+                <h1 className="text-center mt-3">Recuperar contraseña</h1>
                 <div className="mb-3">
                     <label htmlFor="nueva" className="form-label">
                         Nueva contraseña
