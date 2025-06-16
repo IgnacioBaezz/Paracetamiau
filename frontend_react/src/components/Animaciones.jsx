@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import confetti from 'canvas-confetti';
+import confetti from "canvas-confetti";
 import "../styles/DiarioContenido.css";
 
 export default function Animaciones() {
@@ -10,8 +10,10 @@ export default function Animaciones() {
   });
 
   const [selectedMood, setSelectedMood] = useState(null);
+  const [nota, setNota] = useState("");
   const totalHabits = 3;
   const completedHabits = Object.values(habits).filter(Boolean).length;
+  const [activeDay, setActiveDay] = useState(18);
 
   const messages = [
     "¡Comienza tu día saludable!",
@@ -33,15 +35,41 @@ export default function Animaciones() {
     }));
   };
 
-  const handleMoodClick = (mood) => {
-    setSelectedMood(mood);
+  const handleMoodClick = async (mood) => {
+  setSelectedMood(mood);
+
+  const entrada = {
+    emocion: mood,
+    nota: nota,
+    gratitud: "",
+    momento: "mañana",
   };
+
+  try {
+    const response = await fetch("http://localhost:8000/api/emociones/entradas/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`,
+      },
+      body: JSON.stringify(entrada),
+    });
+
+    if (response.ok) {
+      console.log("Entrada emocional enviada correctamente");
+      setNota("");
+      setSelectedMood(null);
+    } else {
+      console.error("Error al enviar la entrada emocional");
+    }
+  } catch (error) {
+    console.error("Error de red:", error);
+  }
+};
 
   const handleDayClick = (index) => {
     setActiveDay(index);
   };
-
-  const [activeDay, setActiveDay] = useState(18);
 
   const celebrate = () => {
     for (let i = 0; i < 80; i++) {
@@ -71,7 +99,7 @@ export default function Animaciones() {
           <div className="calendar-card">
             <div className="calendar-title">Calendario de bienestar</div>
             <div className="calendar-grid">
-              {["D", "L", "M", "M", "J", "V", "S"].map((d) => (
+              {["D", "L", "M", "MI", "J", "V", "S"].map((d) => (
                 <div className="calendar-day-header" key={d}>
                   {d}
                 </div>
@@ -114,21 +142,25 @@ export default function Animaciones() {
         <div className="col-8 col-md-4">
           {/* Emociones */}
           <div className="mood-section">
-            <div className="mood-title">¿Como te sientes hoy?</div>
-            <textarea className="form-control" rows="3" />
+            <div className="mood-title">¿Cómo te sientes hoy?</div>
+            <textarea
+              className="form-control"
+              rows="3"
+              value={nota}
+              onChange={(e) => setNota(e.target.value)}
+            />
             <div className="mood-icons">
               {[
-                { id: "happy", img: "feliz.svg" },
-                { id: "calm", img: "Calma.svg" },
+                { id: "feliz", img: "feliz.svg" },
+                { id: "calmado", img: "Calma.svg" },
                 { id: "neutral", img: "Neutral.svg" },
-                { id: "sad", img: "Tristeza.svg" },
-                { id: "ansious", img: "Ansiedad.svg" },
-                { id: "angry", img: "Enojo.svg" },
+                { id: "triste", img: "Tristeza.svg" },
+                { id: "ansioso", img: "Ansiedad.svg" },
+                { id: "enojado", img: "Enojo.svg" },
               ].map(({ id, img }) => (
                 <div
                   key={id}
                   className={`mood-icon ${selectedMood === id ? "active" : ""}`}
-                  data-mood={id}
                   onClick={() => handleMoodClick(id)}
                 >
                   <img src={`../src/assets/img/${img}`} alt={id} width="40px" />
@@ -148,7 +180,7 @@ export default function Animaciones() {
               },
               {
                 key: "sleep",
-                text: "¿Dormi 8 horas?",
+                text: "¿Dormí 8 horas?",
                 icon: "dormir-vector.svg",
               },
             ].map(({ key, text, icon }) => (
