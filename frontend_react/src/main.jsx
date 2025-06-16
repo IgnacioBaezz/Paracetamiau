@@ -16,6 +16,8 @@ import Quiz from "./pages/Quiz.jsx";
 import DiarioHome from "./pages/DiarioHome.jsx";
 import Estadisticas from "./pages/Estadisticas.jsx";
 import DiarioContenido from "./pages/DiarioContenido.jsx";
+import Formulario from './pages/Formulario.jsx';
+import RecuperarContraseña from './pages/RecuperarContraseña.jsx';
 
 // Estilos personalizados
 import "./styles/variables.css";
@@ -23,7 +25,7 @@ import "./styles/backgrounds.css";
 import "./styles/styles.css";
 import "./styles/DiarioHome.css";
 import "./styles/DiarioContenido.css";
-import Formulario from './pages/Formulario.jsx';
+import "./styles/Recupera.css";
 
 const router = createBrowserRouter([
   { path: "/", element: <Index /> },
@@ -35,6 +37,7 @@ const router = createBrowserRouter([
   { path: "/quiz", element: <Quiz /> },
   { path: "/estadisticas", element: <Estadisticas /> },
   { path: "/formulario", element: <Formulario /> },
+  { path: "/recupera", element: <RecuperarContraseña />}
 ]);
 
 createRoot(document.getElementById("root")).render(
