@@ -13,7 +13,7 @@ import GatoChat from "../components/GatoChat";
 const Home = () => {
   return (
     <>
-      <Navbar titulo="Home" />
+      <Navbar titulo="Home" mostrarLogout={true} />
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />

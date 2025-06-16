@@ -14,7 +14,7 @@ import CarruselDiarioHome from "../components/CarruselDiarioHome";
 const DiarioHome = () => {
   return (
     <>
-      <Navbar titulo="Diario de Bienestar" />
+      <Navbar titulo="Diario de Bienestar" mostrarLogout={true} />
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />
