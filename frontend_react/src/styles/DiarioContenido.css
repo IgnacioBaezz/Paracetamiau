@@ -128,13 +128,21 @@
      background: rgba(255, 255, 255, 0.4);
      transform: scale(1.2);
  }
+
+ @media only screen and (max-width: 768px) {
+  .habits-section {
+    margin-bottom: 150px; /* para dejar espacio al menú móvil */
+  }
+}
  .habits-section {
      display: flex;
      flex-direction: column;
      gap: 15px;
  }
+ 
  .habit-item {
      background: var(--color4);
+     flex-direction: row;
      border-radius: 25px;
      padding: 15px 20px;
      display: flex;
@@ -186,11 +194,11 @@
      flex: 1;
      font-weight: 500;
      color: var(--color8);
-     font-size: 1rem;
+     font-size: 0.95 rem;
  }
  .habit-toggle {
-     width: 60px;
-     height: 30px;
+     width: 50px;
+     height: 26px;
      background: var(--color4);
      border-radius: 15px;
      position: relative;
@@ -215,6 +223,7 @@
  .habit-toggle.active::before {
      transform: translateX(30px);
  }
+
 .floating-paw {
      position: fixed;
      right: 30px;
@@ -237,6 +246,12 @@
      transform: scale(1.1);
      background: var(--color5);
  }
+ @media only screen and (max-width: 768px) {
+  .floating-paw {
+    bottom: 100px !important;
+    right: 20px;
+  }
+}
  .circle-container .card-content::after {
      content: '';
      position: relative;
@@ -244,6 +259,5 @@
      top: 50%;
      transform: translateY(-70%);
      width: 0;
-     height: 0;
-     
+     height: 0; 
  }
