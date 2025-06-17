@@ -33,7 +33,7 @@ const Perfil = () => {
 
   useEffect(() => {
     api
-      .get("/usuarios/3/perfil/")
+      .get("/usuarios/1/perfil/")
       .then((res) => setUsuario(res.data))
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
@@ -66,14 +66,16 @@ const Perfil = () => {
     return (
       <div className="error">
         <p>Error al cargar el perfil.</p>
-        <button onClick={() => window.location.reload()}>Reintentar</button>
+        <button name="btn btn-danger" onClick={() => window.location.reload()}>
+          Reintentar
+        </button>
       </div>
     );
   }
 
   return (
     <>
-      <Navbar titulo="Perfil" />
+      <Navbar titulo="Perfil" mostrarLogout={true} />
       <div className="row position-relative">
         <BotonesMenu />
         <div className="perfil-container col-12 col-md-10">

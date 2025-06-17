@@ -70,7 +70,7 @@ const Login = ({ cambiarModo }) => {
                     ¿No tienes cuenta? <button onClick={cambiarModo} className="btn btn-link">Crear cuenta</button>
                 </p>
                 <p className="mt-3">
-                    ¿Olvidaste tu contraseña? <button className="btn btn-link">Recupérala aquí</button>
+                    ¿Olvidaste tu contraseña? <button onClick={() => navigate('/recupera')} className="btn btn-link">Recupérala aquí</button>
                 </p>
             </form>
 

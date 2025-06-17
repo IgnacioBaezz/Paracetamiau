@@ -14,13 +14,13 @@ import Animaciones from "../components/Animaciones";
 const DiarioContenido = () => {
     return (
        <>
-      <Navbar titulo="Diario Bienestar" />
+      <Navbar titulo="Diario Bienestar" mostrarLogout={true} />
       <main className="container-fluid">
-        <div className="row position-relative">
+        <div className="position-relative">
           <BotonesMenu />
         <div className="col-12">
-            <div className="row justify-content-center align-items-center mt-5">
-                <Animaciones/>
+            <div className="row justify-content-around  mt-5 ms-5">
+                <Animaciones />
             </div>
         </div>
 

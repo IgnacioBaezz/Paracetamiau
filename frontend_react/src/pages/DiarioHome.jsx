@@ -14,15 +14,14 @@ import CarruselDiarioHome from "../components/CarruselDiarioHome";
 const DiarioHome = () => {
   return (
     <>
-      <Navbar titulo="Diario de Bienestar" />
+      <Navbar titulo="Diario de Bienestar" mostrarLogout={true} />
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />
-          <div className="col-12">
-            <div className="row mb-4">
-              <Racha/>
-            </div>
-            <div className="row justify-content-center align-items-center g-4">
+          
+          <div className="col-12 ms-5 ">
+            <Racha/>
+            <div className="row align-items-center">
             <CarruselDiarioHome/>
             
             </div>
