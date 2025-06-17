@@ -2,6 +2,7 @@ import logoApp from "../assets/img/logo-app.png";
 import { useNavigate } from "react-router-dom";
 import { createApiInstance } from "../api/axiosConfig.js";
 import { useState } from "react";
+import "../styles/formularios.css";
 import React from 'react'
 
 const Login = ({ cambiarModo }) => {
@@ -34,14 +35,14 @@ const Login = ({ cambiarModo }) => {
     return (
         <div className="p-4 border rounded-5">
             <form onSubmit={handleLogin}>
-            <h2 className="fw-bold text-uppercase text-center">Bienvenidos</h2>
+            <h2 className="fw-bold text-uppercase text-center text-color8">Bienvenidos</h2>
                 <img
                     src={logoApp}
                     alt="Logo ParacetaMiau"
                     width="200"
                     className="mb-2 d-block mx-auto"
                 />
-                <h4 className="fw-bold text-uppercase text-center">Iniciar Sesión</h4>
+                <h4 className="fw-bold text-uppercase text-center mb-3 text-color8">Iniciar Sesión</h4>
 
                 <div className="mb-3">
                     
@@ -67,10 +68,10 @@ const Login = ({ cambiarModo }) => {
 
                 <button type="submit" className="btn bg-color1 rounded-3 w-100">Ingresar</button>
                 <p className="mt-3">
-                    ¿No tienes cuenta? <button onClick={cambiarModo} className="btn btn-link">Crear cuenta</button>
+                  <button onClick={cambiarModo} className="btn text-color8">Crear cuenta</button>
                 </p>
-                <p className="mt-3">
-                    ¿Olvidaste tu contraseña? <button onClick={() => navigate('/recupera')} className="btn btn-link">Recupérala aquí</button>
+                <p className="">
+                  <button onClick={() => navigate('/recupera')} className="btn text-color8">Recupera tu contraseña</button>
                 </p>
             </form>
 
