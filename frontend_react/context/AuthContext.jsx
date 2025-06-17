@@ -1,45 +1,151 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { createApiInstance } from "../src/api/axiosConfig";
-import { useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
-export const AuthContext = createContext(); // creación del contexto
+const AuthContext = createContext();
 
-const AuthProvider = ({ children }) => {
+export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const navigate = useNavigate();
-  const api = createApiInstance("http://localhost:8000/api");
-  // Cargar usuario desde localStorage
-  useEffect(() => {
-    const token = localStorage.getItem("token"); // usuario logueado
-    if (token) {
-      api
-        .get("/usuarios")
-        .then((response) => setUser(response.data.data))
-        .catch(() => logout());
+  const [loading, setLoading] = useState(true);
+  const [api] = useState(() => createApiInstance());
+
+  const isTokenValid = (token) => {
+    if (!token) return false;
+
+    try {
+      const decoded = jwtDecode(token);
+      const currentTime = Date.now() / 1000;
+      return decoded.exp > currentTime;
+    } catch {
+      return false;
     }
+  };
+
+  const fetchUserProfile = async (userId) => {
+    try {
+      const response = await api.get(`/usuarios/${userId}/perfil/`);
+      return response.data;
+    } catch (error) {
+      console.error("Error al obtener perfil:", error);
+      throw error;
+    }
+  };
+
+  const clearSession = () => {
+    localStorage.removeItem("access");
+    localStorage.removeItem("refresh");
+    setUser(null);
+  };
+
+  useEffect(() => {
+    const initializeAuth = async () => {
+      setLoading(true);
+
+      try {
+        const token = localStorage.getItem("access");
+
+        if (!token || !isTokenValid(token)) {
+          clearSession();
+          return;
+        }
+
+        const decoded = jwtDecode(token);
+        const userId = decoded.user_id;
+
+        const userProfile = await fetchUserProfile(userId);
+        setUser(userProfile);
+      } catch (error) {
+        console.error("Error al inicializar auth:", error);
+        clearSession();
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    initializeAuth();
   }, []);
 
   const login = async (email, password) => {
-    const response = await api.post("/login", { email, password }); // enviar peticion para hacer el login
-    const { token } = response.data;
-    console.log(response);
-    localStorage.setItem("token", token); // se creo la clave "token" y se le asigno un valor del token en el localStorage
-    const profile = await api.get("/user");
-    setUser(profile.data.data);
-    navigate("/profile");
+    try {
+      setLoading(true);
+
+      const response = await api.post("/token/", { email, password });
+      const { access, refresh } = response.data;
+
+      if (!access || !refresh || !isTokenValid(access)) {
+        throw new Error("Tokens inválidos recibidos del servidor");
+      }
+
+      localStorage.setItem("access", access);
+      localStorage.setItem("refresh", refresh);
+
+      const decoded = jwtDecode(access);
+      const userId = decoded.user_id;
+
+      const userProfile = await fetchUserProfile(userId);
+      setUser(userProfile);
+
+      return userProfile;
+    } catch (error) {
+      console.error("Error de login:", error);
+      clearSession();
+      throw error;
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const logout = () => {
-    localStorage.removeItem("token"); // eliminar el token del localStorage
-    setUser(null);
-    navigate("/login");
+  const logout = async () => {
+    clearSession();
+    setLoading(false);
   };
 
-  return (
-    <AuthContext.Provider value={{ user, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  const refreshUser = async () => {
+    if (!user) return;
+
+    try {
+      const token = localStorage.getItem("access");
+      if (!token || !isTokenValid(token)) {
+        clearSession();
+        return;
+      }
+
+      const decoded = jwtDecode(token);
+      const userId = decoded.user_id;
+
+      const userProfile = await fetchUserProfile(userId);
+      setUser(userProfile);
+
+      return userProfile;
+    } catch (error) {
+      console.error("Error al refrescar usuario:", error);
+      clearSession();
+      throw error;
+    }
+  };
+
+  const isAuthenticated = () => {
+    const token = localStorage.getItem("access");
+    return token && isTokenValid(token) && user;
+  };
+
+  const value = {
+    user,
+    loading,
+    login,
+    logout,
+    refreshUser,
+    isAuthenticated: isAuthenticated(),
+    clearSession,
+  };
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth debe ser usado dentro de un AuthProvider");
+  }
+  return context;
 };
-
-export default AuthProvider;
