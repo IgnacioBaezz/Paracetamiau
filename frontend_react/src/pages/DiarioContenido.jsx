@@ -18,6 +18,8 @@ import FloatingPaw from "../components/FloatingPaw";
 import { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
 
+
+//Diario contenido
 const DiarioContenido = () => {
   const [habits, setHabits] = useState({
     water: false,
