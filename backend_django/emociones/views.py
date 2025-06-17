@@ -1,9 +1,9 @@
 from rest_framework import viewsets
 from .models import EstadoAnimo
 from .serializers import EstadoAnimoSerializer
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 class EstadoAnimoViewSet(viewsets.ModelViewSet):
-    queryset = EstadoAnimo.objects.all().order_by("-fecha")
+    queryset = EstadoAnimo.objects.all()
     serializer_class = EstadoAnimoSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]

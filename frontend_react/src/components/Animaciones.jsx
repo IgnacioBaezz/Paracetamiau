@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import "../styles/DiarioContenido.css";
+import { createApiInstance } from "../api/axiosConfig.js";
 
 export default function Animaciones() {
   const [habits, setHabits] = useState({
@@ -9,11 +10,11 @@ export default function Animaciones() {
     sleep: false,
   });
 
-  const [selectedMood, setSelectedMood] = useState(null);
-  const [nota, setNota] = useState("");
   const totalHabits = 3;
   const completedHabits = Object.values(habits).filter(Boolean).length;
   const [activeDay, setActiveDay] = useState(18);
+  const [nota, setNota] = useState("");
+  const [selectedMood, setSelectedMood] = useState(null);
 
   const messages = [
     "¡Comienza tu día saludable!",
@@ -36,36 +37,20 @@ export default function Animaciones() {
   };
 
   const handleMoodClick = async (mood) => {
-  setSelectedMood(mood);
+    const api = createApiInstance("http://localhost:8000/api");
 
-  const entrada = {
-    emocion: mood,
-    nota: nota,
-    gratitud: "",
-    momento: "mañana",
-  };
+    setSelectedMood(mood);
 
-  try {
-    const response = await fetch("http://localhost:8000/api/emociones/entradas/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-      body: JSON.stringify(entrada),
-    });
-
-    if (response.ok) {
-      console.log("Entrada emocional enviada correctamente");
-      setNota("");
-      setSelectedMood(null);
-    } else {
-      console.error("Error al enviar la entrada emocional");
+    try {
+      const response = await api.post("/emociones/entradas/", {
+        emocion: mood,
+        nota: nota,
+        momento: "mañana",
+      });
+    } catch (error) {
+      console.log(error);
     }
-  } catch (error) {
-    console.error("Error de red:", error);
-  }
-};
+  };
 
   const handleDayClick = (index) => {
     setActiveDay(index);
