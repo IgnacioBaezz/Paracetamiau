@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import "../styles/DiarioContenido.css";
-import { createApiInstance } from "../api/axiosConfig.js";
 
 export default function Animaciones() {
   const [habits, setHabits] = useState({
@@ -13,8 +12,6 @@ export default function Animaciones() {
   const totalHabits = 3;
   const completedHabits = Object.values(habits).filter(Boolean).length;
   const [activeDay, setActiveDay] = useState(18);
-  const [nota, setNota] = useState("");
-  const [selectedMood, setSelectedMood] = useState(null);
 
   const messages = [
     "¡Comienza tu día saludable!",
@@ -34,22 +31,6 @@ export default function Animaciones() {
       ...prev,
       [habitKey]: !prev[habitKey],
     }));
-  };
-
-  const handleMoodClick = async (mood) => {
-    const api = createApiInstance("http://localhost:8000/api");
-
-    setSelectedMood(mood);
-
-    try {
-      const response = await api.post("/emociones/entradas/", {
-        emocion: mood,
-        nota: nota,
-        momento: "mañana",
-      });
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   const handleDayClick = (index) => {
@@ -124,36 +105,8 @@ export default function Animaciones() {
         </div>
 
         {/* Sección de emociones y hábitos */}
+        {/* Eliminamos toda la sección de Emociones de aquí */}
         <div className="col-10 col-md-5">
-          {/* Emociones */}
-          <div className="mood-section">
-            <div className="mood-title">¿Cómo te sientes hoy?</div>
-            <textarea
-              className="form-control"
-              rows="3"
-              value={nota}
-              onChange={(e) => setNota(e.target.value)}
-            />
-            <div className="mood-icons">
-              {[
-                { id: "feliz", img: "feliz.svg" },
-                { id: "calmado", img: "Calma.svg" },
-                { id: "neutral", img: "Neutral.svg" },
-                { id: "triste", img: "Tristeza.svg" },
-                { id: "ansioso", img: "Ansiedad.svg" },
-                { id: "enojado", img: "Enojo.svg" },
-              ].map(({ id, img }) => (
-                <div
-                  key={id}
-                  className={`mood-icon ${selectedMood === id ? "active" : ""}`}
-                  onClick={() => handleMoodClick(id)}
-                >
-                  <img src={`../src/assets/img/${img}`} alt={id} width="40px" />
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Hábitos */}
           <div className="habits-section mb-5">
             <div className="habits-section mb-5">
