@@ -75,7 +75,7 @@ const Perfil = () => {
 
   return (
     <>
-      <Navbar titulo="Perfil" />
+      <Navbar titulo="Perfil" mostrarLogout={true} />
       <div className="row position-relative">
         <BotonesMenu />
         <div className="perfil-container col-12 col-md-10">

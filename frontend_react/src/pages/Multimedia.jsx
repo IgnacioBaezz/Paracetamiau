@@ -222,7 +222,7 @@ const Multimedia = () => {
 
   return (
     <>
-      <Navbar titulo="Multimedia" />
+      <Navbar titulo="Multimedia" mostrarLogout={true} />
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />

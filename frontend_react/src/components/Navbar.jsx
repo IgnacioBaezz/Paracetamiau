@@ -1,7 +1,13 @@
 import logo from "./../assets/img/Paracetamiau.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = ({ titulo }) => {
+const Navbar = ({ titulo, mostrarLogout }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token"); // eliminamos el token de sesión del usuario
+    navigate("/"); // nos redirige al index
+  };
   return (
     <nav className="navbar bg-color7 sticky-top">
       <div className="container">
@@ -9,6 +15,12 @@ const Navbar = ({ titulo }) => {
           <img src={logo} alt="Paracetamiau" width={180} />
         </Link>
         <h2 className="text-uppercase fw-bold mx-auto">{titulo}</h2>
+        {/* Botón de cierre */}
+        {mostrarLogout && (
+          <button className="btn bg-color8 ms-3 shadow-sm" onClick={handleLogout}>
+            Cerrar sesión
+          </button>
+        )}
       </div>
     </nav>
   );

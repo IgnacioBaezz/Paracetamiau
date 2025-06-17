@@ -15,7 +15,7 @@ import Animaciones from "../components/Animaciones";
 const DiarioContenido = () => {
     return (
        <>
-      <Navbar titulo="Diario Bienestar" />
+      <Navbar titulo="Diario Bienestar" mostrarLogout={true} />
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />
