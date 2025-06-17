@@ -14,10 +14,11 @@ const RecuperarContraseña = () => {
         <Navbar titulo="Recupera contraseña" />
         <main className="container-fluid">
         <div className="row position-relative">
-          <BotonesMenu />
         <div className="col-12">
-            <div className="row justify-content-center align-items-center mt-5">
+            <div className="d-flex justify-content-center align-items-center">
+              <div className="container mt-3 w-100 bg-color5 rounded-5" style={{maxWidth: "700px"}}>
                 <FormRecuperarContra />
+              </div>
             </div>
         </div>
 

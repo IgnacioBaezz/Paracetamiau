@@ -108,12 +108,15 @@ def ver_perfil():
         print("❌ Error al obtener el perfil.", response.text)
 
 def cambiar_password():
-    user_id = input("ID del usuario: ")
+    user_mail = input("ID del usuario: ")
     new_password = input("Nueva contraseña: ")
+    new_password_confirm = input("Confirmar nueva contraseña: ")
 
-    response = api_request(f"/usuarios/{user_id}/cambiar_password/", method="POST", data={
-        "new_password": new_password
-    }, token=token)
+    response = api_request(f"/usuarios/reset_password/", method="POST", data={
+        'email': user_mail, 
+        'password': new_password, 
+        'password_confirm': new_password_confirm
+    })
 
     if response.status_code == 200:
         print("🔒 Contraseña actualizada.")
@@ -166,6 +169,8 @@ def menu_usuarios():
             break
         else:
             print("❗ Opción no válida.")
+
+
 
 if __name__ == "__main__":
     menu_usuarios()
