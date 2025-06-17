@@ -34,7 +34,7 @@ const CarruselDiarioHome = () => {
   return (
     <>
       {/* Carrusel */}
-      <div className="col-10 col-md-4 align-content-center ms-5 pb-5">
+      <div className="col-10 col-md-4 align-content-center ms-3 pb-5">
         <div
           id="carouselExample"
           className="carousel slide small-carousel mb-3"
