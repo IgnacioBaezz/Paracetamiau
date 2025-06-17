@@ -28,7 +28,6 @@ import "./styles/DiarioContenido.css";
 import "./styles/Recupera.css";
 
 // AuthContext
-import AuthProvider from "../context/AuthContext.jsx";
 import PrivateRoute from "./components/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -53,8 +52,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <RouterProvider router={router} />
   </StrictMode>
 );
