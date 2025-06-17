@@ -29,9 +29,12 @@ import "./styles/Recupera.css";
 
 // AuthContext
 import PrivateRoute from "./components/PrivateRoute";
+import { AuthProvider } from "../context/AuthContext.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Index /> },
+  { path: "/recupera", element: <RecuperarContraseña /> },
+  { path: "/formulario", element: <Formulario /> },
   {
     path: "/home",
     element: (
@@ -40,18 +43,60 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
   },
-  { path: "/diario", element: <DiarioHome /> },
-  { path: "/diarioContenido", element: <DiarioContenido /> },
-  { path: "/multimedia", element: <Multimedia /> },
-  { path: "/perfil", element: <Perfil /> },
-  { path: "/quiz", element: <Quiz /> },
-  { path: "/estadisticas", element: <Estadisticas /> },
-  { path: "/formulario", element: <Formulario /> },
-  { path: "/recupera", element: <RecuperarContraseña /> },
+  {
+    path: "/diario",
+    element: (
+      <PrivateRoute>
+        <DiarioHome />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/diarioContenido",
+    element: (
+      <PrivateRoute>
+        <DiarioContenido />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/multimedia",
+    element: (
+      <PrivateRoute>
+        <Multimedia />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/perfil",
+    element: (
+      <PrivateRoute>
+        <Perfil />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/quiz",
+    element: (
+      <PrivateRoute>
+        <Quiz />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "/estadisticas",
+    element: (
+      <PrivateRoute>
+        <Estadisticas />
+      </PrivateRoute>
+    ),
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

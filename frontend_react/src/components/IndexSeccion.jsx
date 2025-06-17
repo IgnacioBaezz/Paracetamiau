@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import gato from '../assets/img/gatoindex.png';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import gato from "../assets/img/gatoindex.png";
 import "../styles/IndexSeccion.css";
 
 function IndexSeccion() {
@@ -12,7 +12,7 @@ function IndexSeccion() {
         <h2 className="fw-bold titulo-index">
           Únete a la aventura de{" "}
           <button
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/formulario")}
             className="btn-texto-link"
           >
             cuidarte y aprender
@@ -21,12 +21,18 @@ function IndexSeccion() {
         </h2>
 
         <div className="gato">
-          <img src={gato} alt="Logo ParacetaMiau" className="logo-paracetamiau" />
+          <img
+            src={gato}
+            alt="Logo ParacetaMiau"
+            className="logo-paracetamiau"
+          />
         </div>
 
         <p className="descripcion-index">
-          ParacetaMiau es una app educativa que te invita a aprender primeros auxilios y autocuidado a través de quizzes simples, divertidos y responsables.
-          Aquí el juego se convierte en una herramienta para cuidar tu bienestar físico, mental y emocional.
+          ParacetaMiau es una app educativa que te invita a aprender primeros
+          auxilios y autocuidado a través de quizzes simples, divertidos y
+          responsables. Aquí el juego se convierte en una herramienta para
+          cuidar tu bienestar físico, mental y emocional.
         </p>
 
         <div className="caracteristicas">
@@ -40,7 +46,9 @@ function IndexSeccion() {
           </div>
           <div className="caracteristica-item">
             <span className="icono">🎯</span>
-            <span className="texto">Pon a prueba tus conocimientos con quizzes interactivos</span>
+            <span className="texto">
+              Pon a prueba tus conocimientos con quizzes interactivos
+            </span>
           </div>
           <div className="caracteristica-item">
             <span className="icono">📈</span>
@@ -50,7 +58,10 @@ function IndexSeccion() {
 
         <p className="fw-bold mt-4">¡Comienza ahora!</p>
         <div className="botones-accion">
-          <button className="btn-principal" onClick={() => navigate("/formulario")}>
+          <button
+            className="btn-principal"
+            onClick={() => navigate("/formulario")}
+          >
             Ingresar
           </button>
         </div>
