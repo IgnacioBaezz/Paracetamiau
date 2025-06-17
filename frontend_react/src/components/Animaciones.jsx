@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import confetti from 'canvas-confetti';
+import confetti from 'canvas-confetti';
 import "../styles/DiarioContenido.css";
 
 export default function Animaciones() {
@@ -64,10 +64,10 @@ export default function Animaciones() {
   };
 
   return (
-    <div className="container">
-      <div className="row justify-content-center align-items-center">
+    <>
+      <div className="row align-items-center">
         {/* Calendario */}
-        <div className="col-8 col-md-4">
+        <div className="col-10 col-md-5">
           <div className="calendar-card">
             <div className="calendar-title">Calendario de bienestar</div>
             <div className="calendar-grid">
@@ -95,7 +95,7 @@ export default function Animaciones() {
           </div>
 
           {/* Progreso */}
-          <div className="progress-card pb-4">
+          <div className="progress-card pb-2 mb-3">
             <div className="progress-title">Progreso del Día</div>
             <div className="progress-bar">
               <div
@@ -111,7 +111,7 @@ export default function Animaciones() {
         </div>
 
         {/* Sección de emociones y hábitos */}
-        <div className="col-8 col-md-4">
+        <div className="col-10 col-md-5">
           {/* Emociones */}
           <div className="mood-section">
             <div className="mood-title">¿Como te sientes hoy?</div>
@@ -138,34 +138,36 @@ export default function Animaciones() {
           </div>
 
           {/* Hábitos */}
-          <div className="habits-section">
-            {[
-              { key: "water", text: "¿Ya bebí agua?", icon: "vaso-vector.svg" },
-              {
-                key: "exercise",
-                text: "¿Ya hice ejercicio?",
-                icon: "pesa-vector.svg",
-              },
-              {
-                key: "sleep",
-                text: "¿Dormi 8 horas?",
-                icon: "dormir-vector.svg",
-              },
-            ].map(({ key, text, icon }) => (
-              <div
-                key={key}
-                className={`habit-item ${key}`}
-                onClick={() => toggleHabit(key)}
-              >
-                <div className="habit-icon">
-                  <img src={`../src/assets/img/${icon}`} alt={text} />
-                </div>
-                <div className="habit-text">{text}</div>
+          <div className="habits-section mb-5">
+            <div className="habits-section mb-5">
+              {[
+                { key: "water", text: "¿Ya bebí agua?", icon: "vaso-vector.svg" },
+                {
+                  key: "exercise",
+                  text: "¿Ya hice ejercicio?",
+                  icon: "pesa-vector.svg",
+                },
+                {
+                  key: "sleep",
+                  text: "¿Dormi 8 horas?",
+                  icon: "dormir-vector.svg",
+                },
+              ].map(({ key, text, icon }) => (
                 <div
-                  className={`habit-toggle ${habits[key] ? "active" : ""}`}
-                />
-              </div>
-            ))}
+                  key={key}
+                  className={`habit-item ${key}`}
+                  onClick={() => toggleHabit(key)}
+                >
+                  <div className="habit-icon">
+                    <img src={`../src/assets/img/${icon}`} alt={text} width={40} />
+                  </div>
+                  <div className="habit-text">{text}</div>
+                  <div
+                    className={`habit-toggle ${habits[key] ? "active" : ""}`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -201,11 +203,11 @@ export default function Animaciones() {
           `;
           div.textContent = msg;
           document.body.appendChild(div);
-          setTimeout(() => document.body.removeChild(div), 3000);
+          setTimeout(() => document.body.removeChild(div), 1000);
         }}
       >
         🐾
       </div>
-    </div>
+    </>
   );
 }

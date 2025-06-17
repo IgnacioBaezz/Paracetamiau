@@ -3,6 +3,9 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError
+
 from django.contrib.auth import authenticate
 from .models import Usuario
 from .serializers import UsuarioSerializer, UsuarioListSerializer, UsuarioPerfilSerializer
@@ -25,7 +28,7 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     
     def get_permissions(self):
         """Modificar los permisos según la acción."""
-        if self.action == "create" or self.action == "perfil":
+        if self.action == 'create' or self.action == 'reset_password':
             return [AllowAny()]
         return [IsAuthenticated()]
     
@@ -137,3 +140,29 @@ class UsuarioViewSet(viewsets.ModelViewSet):
             'usuarios_verificados': usuarios_verificados,
             'usuarios_no_verificados': total_usuarios - usuarios_verificados
         })
+    
+    @action(detail=False, methods=['post'])
+    def reset_password(self, request):
+        """Restablecer contraseña sin autenticación"""
+        email = request.data.get('email')
+        password = request.data.get('password')
+        password_confirm = request.data.get('password_confirm')
+
+        if not all([email, password, password_confirm]):
+            return Response({'error': 'Todos los campos son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
+
+        if password != password_confirm:
+            return Response({'error': 'Las contraseñas no coinciden'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            validate_password(password)
+        except ValidationError as e:
+            return Response({'error': e.messages}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            usuario = Usuario.objects.get(email=email)
+            usuario.set_password(password)
+            usuario.save()
+            return Response({'message': 'Contraseña actualizada correctamente'}, status=status.HTTP_200_OK)
+        except Usuario.DoesNotExist:
+            return Response({'error': 'No existe una cuenta con ese correo'}, status=status.HTTP_404_NOT_FOUND)
