@@ -2,6 +2,7 @@ import logoApp from "../assets/img/logo-app.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createApiInstance } from "../api/axiosConfig.js";
+import "../styles/formularios.css";
 import React from 'react'
 
 const Signup = ({ cambiarModo }) => {
@@ -48,14 +49,14 @@ const Signup = ({ cambiarModo }) => {
         <div>
             <div className="p-4 border rounded-5">
                 <form onSubmit={handleRegister}>
-                    <h2 className="fw-bold text-uppercase text-center">Únete a Paracetamiau</h2>
+                    <h2 className="fw-bold text-uppercase text-center text-color8">Únete a Paracetamiau</h2>
                     <img
                         src={logoApp}
                         alt="Logo ParacetaMiau"
                         width="200"
                         className="mb-2 d-block mx-auto"
                     />
-                    <h4 className="text-center text-uppercase">Crea tu cuenta</h4>
+                    <h4 className="text-center text-uppercase mb-3 text-color8">Crea tu cuenta</h4>
                     
                     <div className="mb-3">
                         
@@ -111,8 +112,7 @@ const Signup = ({ cambiarModo }) => {
                 </form>
 
                 <p className="mt-3">
-                    ¿Ya tienes cuenta?{" "}
-                    <button onClick={cambiarModo} className="btn btn-link">
+                    <button onClick={cambiarModo} className="btn text-color8">
                         Iniciar sesión
                     </button>
                 </p>
