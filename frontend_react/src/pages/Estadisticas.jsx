@@ -11,7 +11,7 @@ import CarruselEstadisticas from "../components/CarruselEstadisticas";
 function Estadisticas() {
   return (
     <>
-      <Navbar titulo="Estadísticas" />
+      <Navbar titulo="Estadísticas" mostrarLogout={true} />
       <main className="container-fluid bg-fish">
         <div className="row position-relative">
           <CarruselEstadisticas />

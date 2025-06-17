@@ -14,7 +14,7 @@ const Multimedia = () => {
   const temas = {
     rcp: {
       titulo: "Guía paso a paso para aprender RCP",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/wbp_AdGkWPM",
       descripcion:
         "Aprende a realizar reanimación cardiopulmonar básica. Este procedimiento puede salvar vidas.",
       texto: "La reanimación cardiopulmonar (RCP)...",
@@ -23,7 +23,7 @@ const Multimedia = () => {
     },
     convulsiones: {
       titulo: "Cómo actuar ante convulsiones",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/-ZRKueLrTRo",
       descripcion:
         "Aprende a reconocer y actuar correctamente durante una crisis convulsiva para proteger a la persona afectada.",
       texto:
@@ -35,7 +35,7 @@ const Multimedia = () => {
     },
     fracturas: {
       titulo: "Manejo inicial de fracturas",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/2_m49c9XFTQ",
       descripcion:
         "Identifica los signos de una fractura y aprende los primeros auxilios básicos antes de recibir atención médica.",
       texto:
@@ -47,7 +47,7 @@ const Multimedia = () => {
     },
     quemaduras: {
       titulo: "Tratamiento de quemaduras",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/gmAhgtrTLYA",
       descripcion:
         "Clasifica las quemaduras según su gravedad y aprende el tratamiento inmediato para cada tipo.",
       texto:
@@ -59,7 +59,7 @@ const Multimedia = () => {
     },
     shock: {
       titulo: "Shock anafiláctico: actuación de emergencia",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/ShrJ94jnp5s",
       descripcion:
         "Reconoce los síntomas del shock anafiláctico y aprende a actuar rápidamente para salvar vidas.",
       texto:
@@ -71,7 +71,7 @@ const Multimedia = () => {
     },
     hemorragias: {
       titulo: "Control de hemorragias",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/JG1wfNUTzCc",
       descripcion:
         "Aprende técnicas efectivas para controlar diferentes tipos de sangrado y prevenir el shock hipovolémico.",
       texto:
@@ -83,7 +83,7 @@ const Multimedia = () => {
     },
     desmayos: {
       titulo: "Manejo de desmayos y síncope",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/syv0ZyIWakE",
       descripcion:
         "Identifica las causas de los desmayos y aprende a brindar los primeros auxilios apropiados.",
       texto:
@@ -95,7 +95,7 @@ const Multimedia = () => {
     },
     atragantamiento: {
       titulo: "Maniobra de Heimlich y desobstrucción",
-      video: "https://www.youtube.com/embed/e05ZDPm6XCQ",
+      video: "https://www.youtube.com/embed/eUCVvA8HThE",
       descripcion:
         "Domina las técnicas de desobstrucción de vías aéreas para adultos, niños y bebés.",
       texto:
@@ -222,7 +222,7 @@ const Multimedia = () => {
 
   return (
     <>
-      <Navbar titulo="Multimedia" />
+      <Navbar titulo="Multimedia" mostrarLogout={true} />
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />

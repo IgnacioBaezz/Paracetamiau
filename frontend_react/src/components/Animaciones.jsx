@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-// import confetti from 'canvas-confetti';
+import confetti from "canvas-confetti";
 import "../styles/DiarioContenido.css";
+import { createApiInstance } from "../api/axiosConfig.js";
 
 export default function Animaciones() {
   const [habits, setHabits] = useState({
@@ -9,9 +10,11 @@ export default function Animaciones() {
     sleep: false,
   });
 
-  const [selectedMood, setSelectedMood] = useState(null);
   const totalHabits = 3;
   const completedHabits = Object.values(habits).filter(Boolean).length;
+  const [activeDay, setActiveDay] = useState(18);
+  const [nota, setNota] = useState("");
+  const [selectedMood, setSelectedMood] = useState(null);
 
   const messages = [
     "¡Comienza tu día saludable!",
@@ -33,15 +36,25 @@ export default function Animaciones() {
     }));
   };
 
-  const handleMoodClick = (mood) => {
+  const handleMoodClick = async (mood) => {
+    const api = createApiInstance("http://localhost:8000/api");
+
     setSelectedMood(mood);
+
+    try {
+      const response = await api.post("/emociones/entradas/", {
+        emocion: mood,
+        nota: nota,
+        momento: "mañana",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleDayClick = (index) => {
     setActiveDay(index);
   };
-
-  const [activeDay, setActiveDay] = useState(18);
 
   const celebrate = () => {
     for (let i = 0; i < 80; i++) {
@@ -64,14 +77,14 @@ export default function Animaciones() {
   };
 
   return (
-    <div className="container">
-      <div className="row justify-content-center align-items-center">
+    <>
+      <div className="row align-items-center">
         {/* Calendario */}
-        <div className="col-8 col-md-4">
+        <div className="col-10 col-md-5">
           <div className="calendar-card">
             <div className="calendar-title">Calendario de bienestar</div>
             <div className="calendar-grid">
-              {["D", "L", "M", "M", "J", "V", "S"].map((d) => (
+              {["D", "L", "M", "MI", "J", "V", "S"].map((d) => (
                 <div className="calendar-day-header" key={d}>
                   {d}
                 </div>
@@ -95,7 +108,7 @@ export default function Animaciones() {
           </div>
 
           {/* Progreso */}
-          <div className="progress-card pb-4">
+          <div className="progress-card pb-2 mb-3">
             <div className="progress-title">Progreso del Día</div>
             <div className="progress-bar">
               <div
@@ -111,24 +124,28 @@ export default function Animaciones() {
         </div>
 
         {/* Sección de emociones y hábitos */}
-        <div className="col-8 col-md-4">
+        <div className="col-10 col-md-5">
           {/* Emociones */}
           <div className="mood-section">
-            <div className="mood-title">¿Como te sientes hoy?</div>
-            <textarea className="form-control" rows="3" />
+            <div className="mood-title">¿Cómo te sientes hoy?</div>
+            <textarea
+              className="form-control"
+              rows="3"
+              value={nota}
+              onChange={(e) => setNota(e.target.value)}
+            />
             <div className="mood-icons">
               {[
-                { id: "happy", img: "feliz.svg" },
-                { id: "calm", img: "Calma.svg" },
+                { id: "feliz", img: "feliz.svg" },
+                { id: "calmado", img: "Calma.svg" },
                 { id: "neutral", img: "Neutral.svg" },
-                { id: "sad", img: "Tristeza.svg" },
-                { id: "ansious", img: "Ansiedad.svg" },
-                { id: "angry", img: "Enojo.svg" },
+                { id: "triste", img: "Tristeza.svg" },
+                { id: "ansioso", img: "Ansiedad.svg" },
+                { id: "enojado", img: "Enojo.svg" },
               ].map(({ id, img }) => (
                 <div
                   key={id}
                   className={`mood-icon ${selectedMood === id ? "active" : ""}`}
-                  data-mood={id}
                   onClick={() => handleMoodClick(id)}
                 >
                   <img src={`../src/assets/img/${img}`} alt={id} width="40px" />
@@ -138,34 +155,44 @@ export default function Animaciones() {
           </div>
 
           {/* Hábitos */}
-          <div className="habits-section">
-            {[
-              { key: "water", text: "¿Ya bebí agua?", icon: "vaso-vector.svg" },
-              {
-                key: "exercise",
-                text: "¿Ya hice ejercicio?",
-                icon: "pesa-vector.svg",
-              },
-              {
-                key: "sleep",
-                text: "¿Dormi 8 horas?",
-                icon: "dormir-vector.svg",
-              },
-            ].map(({ key, text, icon }) => (
-              <div
-                key={key}
-                className={`habit-item ${key}`}
-                onClick={() => toggleHabit(key)}
-              >
-                <div className="habit-icon">
-                  <img src={`../src/assets/img/${icon}`} alt={text} />
-                </div>
-                <div className="habit-text">{text}</div>
+          <div className="habits-section mb-5">
+            <div className="habits-section mb-5">
+              {[
+                {
+                  key: "water",
+                  text: "¿Ya bebí agua?",
+                  icon: "vaso-vector.svg",
+                },
+                {
+                  key: "exercise",
+                  text: "¿Ya hice ejercicio?",
+                  icon: "pesa-vector.svg",
+                },
+                {
+                  key: "sleep",
+                  text: "¿Dormi 8 horas?",
+                  icon: "dormir-vector.svg",
+                },
+              ].map(({ key, text, icon }) => (
                 <div
-                  className={`habit-toggle ${habits[key] ? "active" : ""}`}
-                />
-              </div>
-            ))}
+                  key={key}
+                  className={`habit-item ${key}`}
+                  onClick={() => toggleHabit(key)}
+                >
+                  <div className="habit-icon">
+                    <img
+                      src={`../src/assets/img/${icon}`}
+                      alt={text}
+                      width={40}
+                    />
+                  </div>
+                  <div className="habit-text">{text}</div>
+                  <div
+                    className={`habit-toggle ${habits[key] ? "active" : ""}`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -201,11 +228,11 @@ export default function Animaciones() {
           `;
           div.textContent = msg;
           document.body.appendChild(div);
-          setTimeout(() => document.body.removeChild(div), 3000);
+          setTimeout(() => document.body.removeChild(div), 1000);
         }}
       >
         🐾
       </div>
-    </div>
+    </>
   );
 }

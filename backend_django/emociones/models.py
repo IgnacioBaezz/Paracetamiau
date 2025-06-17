@@ -16,7 +16,7 @@ EMOCIONES = (
     ("agradecido", "Agradecido"),
 )
 
-class EntradaEmocional(models.Model):
+class EstadoAnimo(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     emocion = models.CharField(max_length=20, choices=EMOCIONES)
     nota = models.TextField(blank=True)
