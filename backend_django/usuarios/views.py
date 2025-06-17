@@ -25,7 +25,7 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     
     def get_permissions(self):
         """Modificar los permisos según la acción."""
-        if self.action == 'create':
+        if self.action == "create" or self.action == "perfil":
             return [AllowAny()]
         return [IsAuthenticated()]
     
