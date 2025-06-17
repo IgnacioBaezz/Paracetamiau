@@ -1,12 +1,9 @@
-import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 
-const PrivateRoute = ({ children }) => {
-  const { user } = useContext(AuthContext);
-  const token = localStorage.getItem("token"); // se obtiene el token del localStorage
-  console.log("protegida ", token);
+function PrivateRoute({ children }) {
+  const token = localStorage.getItem("access");
 
-  return token ? children : <Navigate to="/login" />;
-};
+  return token ? children : <Navigate to="/formulario" />;
+}
 
 export default PrivateRoute;

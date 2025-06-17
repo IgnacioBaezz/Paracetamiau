@@ -14,6 +14,8 @@ import Emociones from "../components/Emociones";
 import Habitos from "../components/Habitos";
 import FloatingPaw from "../components/FloatingPaw";
 
+
+const DiarioContenido = () => {
 // React y lógica
 import { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
@@ -52,7 +54,6 @@ const DiarioContenido = () => {
       if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
     }
   }, [completedHabits]);
-
   return (
     <>
       <Navbar titulo="Diario Bienestar" mostrarLogout={true} />
@@ -91,5 +92,4 @@ const DiarioContenido = () => {
     </>
   );
 };
-
 export default DiarioContenido;
