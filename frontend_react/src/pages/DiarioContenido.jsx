@@ -1,4 +1,3 @@
-
 // Estilos generales
 import "../styles/styles.css";
 import "../styles/variables.css";
