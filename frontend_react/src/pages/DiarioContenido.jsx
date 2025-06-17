@@ -62,7 +62,7 @@ const DiarioContenido = () => {
           <div className="col-10">
             <div className="row justify-content-around mt-5 ms-5">
               {/* Columna 1: Calendario y Progreso */}
-              <div className="col-12 col-md-5">
+              <div className="col-12 col-md-6 ">
                 <Calendario activeDay={activeDay} setActiveDay={setActiveDay} />
                 <BarraProgreso
                   completedHabits={completedHabits}
@@ -79,6 +79,7 @@ const DiarioContenido = () => {
                   selectedMood={selectedMood}
                   setSelectedMood={setSelectedMood}
                 />
+                
                 <Habitos habits={habits} setHabits={setHabits} />
               </div>
             </div>
