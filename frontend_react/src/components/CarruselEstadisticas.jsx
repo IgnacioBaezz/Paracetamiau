@@ -4,6 +4,7 @@ import aguaImg from "../assets/img/agua.png";
 import deporteImg from "../assets/img/deporte.png";
 import habitoImg from "../assets/img/habito.png";
 import { Carousel } from "bootstrap";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"
 
 
 const slides = [
