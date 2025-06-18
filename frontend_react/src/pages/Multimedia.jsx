@@ -2,9 +2,11 @@ import "../styles/styles.css";
 import "../styles/variables.css";
 import "../styles/backgrounds.css";
 import "../styles/Multimedia.css";
+import "../styles/menuLateral.css";
 
 import Navbar from "../components/Navbar";
 import BotonesMenu from "../components/BotonesMenu";
+import MenuLateralMultimediaOffcanvas from "../components/MenuLateralMultimediaOffcanvas";
 
 import { useState } from "react";
 
@@ -223,6 +225,7 @@ const Multimedia = () => {
   return (
     <>
       <Navbar titulo="Multimedia" mostrarLogout={true} />
+      <MenuLateralMultimediaOffcanvas onSelect={mostrarContenido} />
       <main className="container-fluid">
         <div className="row position-relative">
           <BotonesMenu />
