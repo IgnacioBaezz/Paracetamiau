@@ -15,3 +15,12 @@ html {
     /* scroll suave quizz */
     scroll-behavior: smooth;
 }
+
+/* Botón de Cierre de sesión */
+.logout-floating {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1020;
+  }
+  
