@@ -24,7 +24,7 @@ const Signup = ({ cambiarModo }) => {
         password,
         password_confirm: passwordConfirm,
       });
-      login(email, password);
+      await login(email, password);
       navigate("/home");
     } catch (err) {
       console.error(err);
