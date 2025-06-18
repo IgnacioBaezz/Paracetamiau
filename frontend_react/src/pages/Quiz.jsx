@@ -36,7 +36,6 @@ const Quiz = () => {
       <Navbar titulo="Quiz" mostrarLogout={true} />
       <main className="container-fluid">
         <div className="row position-relative">
-          <h2>Lala Quiz</h2>
           <BotonesMenu />
           <MenuLateral />
         </div>

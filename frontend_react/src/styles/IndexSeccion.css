@@ -1,7 +1,8 @@
 /* Contenedor principal */
 .index-contenedor {
-    padding-top: -150px; 
-    padding-bottom: 10px; /* Reducido para acercar las cards */
+    padding-top: -150px;
+    padding-bottom: 10px;
+    /* Reducido para acercar las cards */
     box-sizing: border-box;
     margin-top: -30px;
 }
@@ -23,7 +24,7 @@
     position: relative;
     display: inline-block;
     margin-bottom: 1px;
-    animation: subtle-float-scale 4s ease-in-out infinite; 
+    animation: subtle-float-scale 4s ease-in-out infinite;
     margin-top: -17px;
 }
 
@@ -40,9 +41,12 @@
 
 /* Animación flotante */
 @keyframes subtle-float-scale {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px) scale(1);
     }
+
     50% {
         transform: translateY(-10px) scale(1.02);
     }
@@ -53,7 +57,7 @@
     font-size: 5rem;
     margin-top: 0;
     margin-bottom: 20px;
-    max-width: 600px; 
+    max-width: 600px;
     font-weight: bold;
     white-space: nowrap;
 }
@@ -76,13 +80,13 @@
 
 /* Descripción paracetamiau*/
 .descripcion-index {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     line-height: 1.6;
-    max-width: 100%;  
+    max-width: 100%;
     width: 100%;
     margin: 0 auto 30px auto;
     opacity: 0.95;
-    text-align: center;     
+    text-align: center;
     padding: 0 20px;
     margin-top: -30px;
 }
@@ -135,19 +139,20 @@
     max-width: 260px;
     padding: 12px 25px;
     font-size: 1rem;
-    background-color: #0d9488; /* turquesa */
+    background-color: #0d9488;
+    /* turquesa */
     color: white;
     border: none;
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
 }
 
 .btn-principal:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     background-color: #0f766e;
 }
@@ -240,36 +245,44 @@
 
 /* Efecto de pulso */
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
 }
 
 /* InfoCards finales */
 .infocards {
-  margin-top: 0rem; /* Lo dejamos en 0 para máxima cercanía */
+    margin-top: 0rem;
+    /* Lo dejamos en 0 para máxima cercanía */
 }
 
 /* Nuevo estilo para el botón "cuidarte y aprender" */
 .btn-texto-link {
-  background: #f5ffad;
-  border: none;
-  padding: 10px 25px;
-  font-size: 1em;
-  font-weight: bold;
-  color: #01a499;
-  cursor: pointer;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(255, 254, 188, 0.922);
-  transition: all 0.3s ease;
-  display: inline-block;
-  white-space: nowrap;
+    background: #f5ffad;
+    border: none;
+    padding: 10px 25px;
+    margin: 20px 0px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #01a499;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(255, 254, 188, 0.922);
+    transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .btn-texto-link:hover,
 .btn-texto-link:focus {
-  outline: none;
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.6);
-  color: #0f766e;
-  text-decoration: underline;
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.6);
+    color: #0f766e;
 }

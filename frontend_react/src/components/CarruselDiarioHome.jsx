@@ -50,7 +50,7 @@ const CarruselDiarioHome = () => {
               </div>
             </div>
             <div className="carousel-item">
-              <div onClick={() => navigate("/diarioEstadisticas")}>
+              <div onClick={() => navigate("/estadisticas")}>
                 <img
                   src="../src/assets/img/estadisticas-portada.svg"
                   className="d-block w-100"
