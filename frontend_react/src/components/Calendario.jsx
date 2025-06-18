@@ -3,7 +3,11 @@ import dayjs from "dayjs";
 import "dayjs/locale/es";
 dayjs.locale("es");
 
-export default function Calendario({ activeDay, setActiveDay, fechasConEntrada = [] }) {
+export default function Calendario({
+  activeDay,
+  setActiveDay,
+  fechasConEntrada = [],
+}) {
   const [currentDate, setCurrentDate] = useState(dayjs());
 
   const startOfMonth = currentDate.startOf("month");
@@ -26,9 +30,15 @@ export default function Calendario({ activeDay, setActiveDay, fechasConEntrada =
   return (
     <div className="calendar-card">
       <div className="calendar-title d-flex justify-content-between align-items-center">
-        <button onClick={handlePrevMonth} className="btn btn-sm btn-light">←</button>
-        <span>{monthName.charAt(0).toUpperCase() + monthName.slice(1)} {year}</span>
-        <button onClick={handleNextMonth} className="btn btn-sm btn-light">→</button>
+        <button onClick={handlePrevMonth} className="btn btn-sm btn-light">
+          ←
+        </button>
+        <span>
+          {monthName.charAt(0).toUpperCase() + monthName.slice(1)} {year}
+        </span>
+        <button onClick={handleNextMonth} className="btn btn-sm btn-light">
+          →
+        </button>
       </div>
 
       <div className="calendar-grid">
@@ -56,11 +66,9 @@ export default function Calendario({ activeDay, setActiveDay, fechasConEntrada =
           return (
             <div
               key={index}
-              className={`calendar-day ${
-                isToday ? "today" : ""
-              } ${hasEntry ? "has-entry" : ""} ${
-                activeDay === index ? "active" : ""
-              }`}
+              className={`calendar-day ${isToday ? "today" : ""} ${
+                hasEntry ? "has-entry" : ""
+              } ${activeDay === index ? "active" : ""}`}
               onClick={() => setActiveDay(index)}
             >
               {day}
