@@ -4,4 +4,9 @@ from .models import EstadoAnimo
 class EstadoAnimoSerializer(serializers.ModelSerializer):
     class Meta:
         model = EstadoAnimo
-        fields = '__all__'
+        fields = ["id", "emocion", "nota", "momento", "fecha"]
+        read_only_fields = ["fecha"]
+
+    def create(self, validated_data):
+        validated_data["usuario"] = self.context["request"].user
+        return super().create(validated_data)
