@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createApiInstance } from "../api/axiosConfig.js";
 import "../styles/formularios.css";
-import React from "react";
+import { useAuth } from "../../context/AuthContext.jsx";
 
 const Signup = ({ cambiarModo }) => {
   const navigate = useNavigate();
