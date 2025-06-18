@@ -13,13 +13,8 @@ import BarraProgreso from "../components/BarraProgreso";
 import Emociones from "../components/Emociones";
 import Habitos from "../components/Habitos";
 import FloatingPaw from "../components/FloatingPaw";
-
-
-const DiarioContenido = () => {
-// React y lógica
 import { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
-
 
 //Diario contenido
 const DiarioContenido = () => {
@@ -94,4 +89,5 @@ const DiarioContenido = () => {
     </>
   );
 };
+
 export default DiarioContenido;

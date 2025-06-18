@@ -5,6 +5,7 @@ import deporteImg from "../assets/img/deporte.png";
 import habitoImg from "../assets/img/habito.png";
 import { Carousel } from "bootstrap";
 
+
 const slides = [
   { titulo: "Consumo de Agua", img: aguaImg, alt: "Agua" },
   { titulo: "Actividad Física", img: deporteImg, alt: "Deportes" },
@@ -26,7 +27,7 @@ function CarruselEstadisticas() {
 
           {/* Tarjeta del carrusel */}
           <div className="carrusel-tarjeta">
-            <h3>{slides[activeIndex].titulo}</h3>
+            
             <div className="carousel-inner">
               {slides.map((slide, index) => (
                 <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
